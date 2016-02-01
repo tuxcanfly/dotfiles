@@ -1,0 +1,35 @@
+[user]
+	name = "Javed Khan"
+	email = "<tuxcanfly@gmail.com>"
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+	safecrlf = false
+	editor = gvim -f
+[color]
+	ui = auto
+[push]
+	default = tracking
+[alias]
+    a = add
+    b = branch
+    co = checkout
+    ci = commit
+    ca = commit -am
+    cf = commit --amend --no-edit
+    d = diff
+    dc = diff --cached
+    dm = diff --diff-filter=M
+    f = stash save
+    st = status -sb
+    up = pull --no-edit
+    s = show
+    r = remote
+    t = branch --set-upstream
+    pop = stash pop
+    app = stash apply
+
+[url "git@github.com"]
+	insteadOf = gh
+[url "git@bitbucket.com:"]
+	insteadOf = bb

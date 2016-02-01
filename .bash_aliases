@@ -1,0 +1,7 @@
+alias c='clear'
+alias e='vim'
+alias g='git'
+alias p='python'
+alias y='xclip -selection clipboard'
+alias sudo='sudo -H'
+alias irssi='ssh tuxcanfly.me -t "tmux -2 attach-session -t irssi"'
