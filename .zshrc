@@ -86,6 +86,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias g='git'
-alias irssi='ssh tuxcanfly.me -t "tmux -2 attach-session -d -t irssi"'
+alias irssi='ssh tuxcanfly.me -t "tmux -2 attach-session -t irssi"'
 
 . ~/.z.sh
