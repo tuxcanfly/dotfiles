@@ -79,28 +79,24 @@ autocmd     FileType            go          setlocal    noexpandtab
 
 """ ---- Keybindings ----
 
-" tabbing
-map <silent>K       :tabnext<CR>
-map <silent>J       :tabprevious<CR>
-" remove trailing whitespace
-map <leader>w :FixWhitespace<CR>
-" clear search highlight
-nnoremap <leader><space> :noh<CR>
-" shortcuts
+map <silent><leader><Enter> o<Esc>k
 nnoremap ; :
 
-map <silent><leader>s :Gstatus<CR>
-map <silent><leader>d :Gdiff<CR>
-nmap <leader>fp :Git push<CR>
-nmap <leader>fm :Git pull<CR>
-nmap <leader>fc :Gread<CR>
-nmap <leader>fw :Gwrite<CR>
+map <silent>K                           :tabnext<CR>
+map <silent>J                           :tabprevious<CR>
+map <leader>w                           :FixWhitespace<CR>
+map <silent><leader>s                   :Gstatus<CR>
+map <silent><leader>d                   :Gdiff<CR>
+map <Leader>T                           :tabnew<CR>
+map <leader>g                           :Ggrep <cword>
+map <leader>w                           :FixWhitespace<CR>
 
-map <silent><leader><Enter> o<Esc>k
-map <Leader>T :tabnew<CR>
-map <leader>g   :Ggrep <cword>
-map <leader>w :FixWhitespace<CR>
-nmap <C-s>      :wa<CR>
+nmap <leader><space>                    :noh<CR>
+nmap <leader>fp                         :Git push<CR>
+nmap <leader>fm                         :Git pull<CR>
+nmap <leader>fc                         :Gread<CR>
+nmap <leader>fw                         :Gwrite<CR>
+nmap <C-s>                              :wa<CR>
 
 " modify selected text using combining diacritics
 command! -range -nargs=0 Overline        call s:CombineSelection(<line1>, <line2>, '0305')
