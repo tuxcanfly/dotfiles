@@ -3,6 +3,7 @@ filetype off
 
 set runtimepath     +=~/.vim/bundle/vundle/
 call vundle#begin()
+
 """ ---- Plugins ------
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
@@ -71,9 +72,7 @@ let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_theme                     ='behelit'
 
-
 colorscheme behelit
-
 
 autocmd     FileType            go          setlocal    noexpandtab
 
