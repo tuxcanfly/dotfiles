@@ -5,7 +5,7 @@
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	safecrlf = false
-	editor = gvim -f
+    editor = vim
 [color]
 	ui = auto
 [push]
