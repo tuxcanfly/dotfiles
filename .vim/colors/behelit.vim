@@ -42,8 +42,8 @@ highlight LineNr          guifg=#5f87af    guibg=#101010    gui=NONE
 highlight StatusLine      guifg=#5f5faf    guibg=#1c1c1c    gui=NONE
 highlight StatusLineNC    guifg=#585858    guibg=#1c1c1c    gui=NONE
 highlight VertSplit       guifg=#1c1c1c    guibg=#1c1c1c    gui=NONE
-highlight Visual          guifg=NONE       guibg=#1c1c1c    gui=NONE
-highlight VisualNOS       guifg=NONE       guibg=#1c1c1c    gui=underline
+highlight Visual          guifg=#1c1c1c       guibg=#5fff5f    gui=NONE
+highlight VisualNOS       guifg=#1c1c1c       guibg=#5fff5f    gui=underline
 highlight WildMenu        guifg=#d7005f    guibg=#1c1c1c    gui=bold
 highlight Folded          guifg=#af87ff    guibg=#1c1c1c    gui=NONE
 highlight FoldColumn      guifg=#af87ff    guibg=#1c1c1c    gui=NONE
@@ -106,8 +106,8 @@ if &t_Co > 255
   highlight StatusLine      ctermfg=61      ctermbg=234     cterm=NONE
   highlight StatusLineNC    ctermfg=240     ctermbg=234     cterm=NONE
   highlight VertSplit       ctermfg=234     ctermbg=234     cterm=NONE
-  highlight Visual          ctermfg=NONE    ctermbg=234     cterm=NONE
-  highlight VisualNOS       ctermfg=NONE    ctermbg=234     cterm=underline
+  highlight Visual          ctermfg=234    ctermbg=83     cterm=NONE
+  highlight VisualNOS       ctermfg=234    ctermbg=83     cterm=underline
   highlight WildMenu        ctermfg=161     ctermbg=234     cterm=bold
   highlight Folded          ctermfg=141     ctermbg=234     cterm=NONE
   highlight FoldColumn      ctermfg=141     ctermbg=234     cterm=NONE
