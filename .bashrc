@@ -173,8 +173,6 @@ stty -ixon
 export BROWSER=chromium-browser
 export EDITOR="vim"
 
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-
 export DEBFULLNAME='Jakh Daven'
 export DEBEMAIL='tuxcanfly@gmail.com'
 export GIT_PS1_SHOWDIRTYSTATE=true
