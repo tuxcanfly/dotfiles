@@ -170,13 +170,12 @@ eval "$(alias -p | sed -e 's/alias \([^=][^=]*\)='\''\([^ ][^ ]*\) *\(.*\)'\''/w
 unset wrap_alias
 
 stty -ixon
+
 export BROWSER=chromium-browser
 export EDITOR="vim"
-
 export DEBFULLNAME='Jakh Daven'
 export DEBEMAIL='tuxcanfly@gmail.com'
 export GIT_PS1_SHOWDIRTYSTATE=true
-
 export PLATFORM='linux'
 export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
