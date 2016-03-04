@@ -1,30 +1,28 @@
 set nocompatible
 filetype off
 
-set runtimepath     +=~/.vim/bundle/vundle/
-call vundle#begin()
-
+call plug#begin()
 """ ---- Plugins ------
-Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-ragtag'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-abolish'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'skwp/greplace.vim'
-call vundle#end()
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-abolish'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Chiel92/vim-autoformat'
+Plug 'skwp/greplace.vim'
+call plug#end()
 
 syntax on
 filetype plugin on
