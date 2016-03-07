@@ -183,3 +183,5 @@ export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 PATH=$PATH:~/.bin/
 GOPATH=~/Work/go
 PATH=$PATH:$GOPATH/bin
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

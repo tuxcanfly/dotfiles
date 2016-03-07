@@ -90,3 +90,6 @@ alias irssi='ssh tuxcanfly.me -t "tmux -2 attach-session -t irssi"'
 alias y='xclip -selection clipboard'
 
 . ~/.z.sh
+. ~/.fzf.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
