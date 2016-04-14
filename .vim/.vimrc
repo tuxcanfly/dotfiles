@@ -3,6 +3,8 @@ filetype off
 
 call plug#begin()
 """ ---- Plugins ------
+Plug 'jamessan/vim-gnupg'
+Plug 'edkolev/tmuxline.vim'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -24,6 +26,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
@@ -71,9 +74,10 @@ let g:syntastic_mode_map                ={ 'mode': 'passive' }
 let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
-let g:airline_theme                     ='behelit'
+let g:airline_powerline_fonts           = 1
+let g:tmuxline_theme                    = 'airline_visual'
 
-colorscheme behelit
+colorscheme molokai
 
 autocmd     FileType            go          setlocal    noexpandtab
 
