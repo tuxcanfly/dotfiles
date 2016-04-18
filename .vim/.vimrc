@@ -88,12 +88,10 @@ nnoremap ; :
 
 map <silent>K                           :tabnext<CR>
 map <silent>J                           :tabprevious<CR>
-map <leader>w                           :FixWhitespace<CR>
 map <silent><leader>s                   :Gstatus<CR>
 map <silent><leader>d                   :Gdiff<CR>
 map <Leader>T                           :tabnew<CR>
 map <leader>g                           :Ggrep <cword>
-map <leader>w                           :FixWhitespace<CR>
 
 nmap <leader><space>                    :noh<CR>
 nmap <leader>fp                         :Git push<CR>
