@@ -1,0 +1,1 @@
+/home/tuxcanfly/.vimrc
