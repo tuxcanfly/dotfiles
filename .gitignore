@@ -17,7 +17,6 @@ nosetests.xml
 .netrwhist
 .lvimrc
 
-circle.py
 .env
 
 *.db-journal
@@ -25,6 +24,6 @@ circle.py
 node_modules
 *.egg-info
 .noseids
-btcsim
 .virtualenv
-btcsim-stats.txt
+
+.init.vim-rplugin~
