@@ -83,7 +83,7 @@ let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:deoplete#enable_at_startup        = 1
 
-colorscheme gruvbox
+colorscheme bubblegum-256-dark
 
 autocmd     FileType            go          setlocal    noexpandtab
 
