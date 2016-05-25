@@ -26,7 +26,6 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
