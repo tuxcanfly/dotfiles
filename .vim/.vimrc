@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
