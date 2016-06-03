@@ -5,7 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -89,7 +89,11 @@ source $ZSH/oh-my-zsh.sh
 alias g='git'
 alias y='xclip -selection clipboard'
 
-. ~/.zsh_aliases
-
-. ~/.z.sh
+# z - jump freq dirs
+[ -f ~/.z.sh ] && . ~/.z.sh
+# fzf - fuzzy finder
 [ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
+# personal aliases
+[ -f ~/.zsh.aliases ] && . ~/.zsh.aliases
+# flavors
+[ -f ~/.zsh.extra ] && . ~/.zsh.extra
