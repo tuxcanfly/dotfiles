@@ -75,6 +75,7 @@ let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
+let g:go_fmt_command                    = "goimports"
 
 colorscheme gruvbox
 
