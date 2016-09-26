@@ -24,15 +24,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 function! DoRemote(arg)
     UpdateRemotePlugins
 endfunction
+if has("nvim")
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+endif
 call plug#end()
 
 syntax on
@@ -82,8 +83,10 @@ let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:deoplete#enable_at_startup        = 1
+let g:todo_root                         = '~/Seafile/Dropbox/TODO/'
+let g:go_fmt_command                    = "goimports"
 
-colorscheme bubblegum-256-dark
+colorscheme gruvbox
 
 autocmd     FileType            go          setlocal    noexpandtab
 
