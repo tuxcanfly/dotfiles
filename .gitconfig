@@ -28,6 +28,7 @@
     t = branch --set-upstream
     pop = stash pop
     app = stash apply
+    cp = ! git log --pretty=format:'%H' -n 1  | xclip -selection clipboard
 
 [url "git@github.com"]
 	insteadOf = gh
