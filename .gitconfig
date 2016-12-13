@@ -25,7 +25,7 @@
     up = pull --no-edit
     s = show
     r = remote
-    t = branch --set-upstream
+    t = push --set-upstream
     pop = stash pop
     app = stash apply
     cp = ! git log --pretty=format:'%H' -n 1  | xclip -selection clipboard
