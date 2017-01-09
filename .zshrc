@@ -91,9 +91,9 @@ alias y='xclip -selection clipboard'
 
 # z - jump freq dirs
 [ -f ~/.z.sh ] && . ~/.z.sh
-# fzf - fuzzy finder
-[ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
 # personal aliases
 [ -f ~/.zsh.aliases ] && . ~/.zsh.aliases
 # flavors
 [ -f ~/.zsh.extra ] && . ~/.zsh.extra
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

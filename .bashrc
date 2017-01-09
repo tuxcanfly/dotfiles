@@ -171,7 +171,7 @@ unset wrap_alias
 
 stty -ixon
 
-export BROWSER=chromium-browser
+export BROWSER=firefox
 export EDITOR="vim"
 export DEBFULLNAME='Jakh Daven'
 export DEBEMAIL='tuxcanfly@gmail.com'
