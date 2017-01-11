@@ -78,7 +78,7 @@ let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
 
-colorscheme solarized
+colorscheme apprentice
 
 autocmd     FileType            go          setlocal    noexpandtab
 
