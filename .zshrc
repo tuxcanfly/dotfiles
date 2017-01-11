@@ -55,7 +55,7 @@ plugins=(git golang history tmux ubuntu)
 
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/.linuxbrew/bin/
+export PATH=$PATH:$HOME/.linuxbrew/bin
 
 source $ZSH/oh-my-zsh.sh
 
