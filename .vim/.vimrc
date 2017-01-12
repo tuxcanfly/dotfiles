@@ -22,6 +22,7 @@ Plug 'scrooloose/syntastic'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'junegunn/vim-easy-align'
@@ -78,7 +79,7 @@ let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
 
-colorscheme apprentice
+colorscheme onedark
 
 autocmd     FileType            go          setlocal    noexpandtab
 
