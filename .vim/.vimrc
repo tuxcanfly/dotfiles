@@ -27,8 +27,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 
 syntax on
@@ -78,6 +79,7 @@ let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
+let &colorcolumn                        =join(range(81,999),",")
 
 colorscheme onedark
 
