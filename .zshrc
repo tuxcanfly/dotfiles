@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias g='git'
 alias y='xclip -selection clipboard'
-alias irssi='ssh tuxcanfly.me -t "tmux -2 attach-session -t irssi"'
+alias tux-session="mosh tuxcanfly.me -- tmux -2u attach-session -t"
 
 # z - jump freq dirs
 [ -f ~/.z.sh ] && . ~/.z.sh
