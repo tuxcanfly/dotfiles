@@ -27,3 +27,5 @@ node_modules
 .virtualenv
 
 .init.vim-rplugin~
+
+.fonts/fonts.dir

@@ -55,6 +55,7 @@ plugins=(git golang history tmux ubuntu)
 
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.linuxbrew/bin
 
 source $ZSH/oh-my-zsh.sh
@@ -86,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias g='git'
 alias y='xclip -selection clipboard'
+alias irssi='ssh tuxcanfly.me -t "tmux -2 attach-session -t irssi"'
 
 # z - jump freq dirs
 [ -f ~/.z.sh ] && . ~/.z.sh
@@ -95,3 +97,5 @@ alias y='xclip -selection clipboard'
 [ -f ~/.zsh.extra ] && . ~/.zsh.extra
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+stty -ixon

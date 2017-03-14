@@ -74,7 +74,7 @@ let g:closetag_default_xml              =1
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
 let g:syntastic_mode_map                ={ 'mode': 'passive' }
-let g:go_bin_path                       = expand("~/.bin")
+let g:go_bin_path                       = expand("~/bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
