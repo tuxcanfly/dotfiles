@@ -17,7 +17,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'vim-airline/vim-airline'
@@ -81,7 +80,7 @@ let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
 let &colorcolumn                        =join(range(81,999),",")
 
-colorscheme onedark
+colorscheme gruvbox
 
 autocmd     FileType            go          setlocal    noexpandtab
 
@@ -103,6 +102,7 @@ nmap <leader>fm                         :Git pull<CR>
 nmap <leader>fc                         :Gread<CR>
 nmap <leader>fw                         :Gwrite<CR>
 nmap <C-s>                              :wa<CR>
+nmap <C-p>                              :FZF<CR>
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
