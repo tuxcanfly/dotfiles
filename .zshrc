@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/tuxcanfly/.oh-my-zsh
+export ZSH=/home/tuxcanfly/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="awesomepanda"
+ZSH_THEME="sorin"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,17 +85,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias g='git'
-alias y='xclip -selection clipboard'
-alias tux-session="mosh tuxcanfly.me -- tmux -2u attach-session -t"
-
-# z - jump freq dirs
-[ -f ~/.z.sh ] && . ~/.z.sh
 # personal aliases
 [ -f ~/.zsh.aliases ] && . ~/.zsh.aliases
 # flavors
 [ -f ~/.zsh.extra ] && . ~/.zsh.extra
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 stty -ixon
+
+source ~/.zplug.sh
