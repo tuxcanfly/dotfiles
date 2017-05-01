@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
+Plug 'chriskempson/base16-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
@@ -78,7 +79,6 @@ let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
-let &colorcolumn                        =join(range(81,999),",")
 
 colorscheme gruvbox
 

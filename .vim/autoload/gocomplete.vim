@@ -1,0 +1,1 @@
+/home/tuxcanfly/.vim/plugged/gocode/vim/autoload/gocomplete.vim
