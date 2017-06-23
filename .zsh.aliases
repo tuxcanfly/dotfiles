@@ -1,0 +1,5 @@
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias tux-session=""
+alias m=./manage.py
+alias flix="pirate-get -C 'peerflix %s --mpv'"
+alias tux-session="mosh tuxcanfly.me -- tmux -2u attach-session -t"
