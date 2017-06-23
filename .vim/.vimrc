@@ -25,6 +25,11 @@ Plug 'joshdick/onedark.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'ternjs/tern_for_vim'
+Plug 'leshill/vim-json'
+Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
@@ -79,8 +84,17 @@ let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
+let g:javascript_plugin_flow            = 1
+let g:jsx_ext_required                  = 0
+let g:slime_target                      = "tmux"
+if exists("$TMUX")
+    let g:slime_default_config              = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
+endif
+let g:jedi#goto_command                 = "gd"
+let g:tern_map_keys                     = 1
+let g:tern_show_argument_hints          = "on_hold"
 
-colorscheme gruvbox
+colorscheme spacegray
 
 autocmd     FileType            go          setlocal    noexpandtab
 

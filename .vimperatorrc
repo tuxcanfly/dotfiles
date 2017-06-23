@@ -1,0 +1,8 @@
+"3.16.0 (created: 2017/02/01 00:55:15)
+
+map J :tabprevious<Return>
+map K :tabnext<Return>
+set hintchars=asdfg;lkjh
+set gui+=nonavigation
+
+" vim: set ft=vimperator:
