@@ -11,7 +11,7 @@ export PATH=$PATH:$HOME/.linuxbrew/bin
 
 source ~/.zgen/zgen.zsh
 source $ZSH/oh-my-zsh.sh
-[ -f ~/.z.aliases ] && . ~/.z.aliases
+[ -f ~/.zsh.aliases ] && . ~/.zsh.aliases
 
 if ! zgen saved; then
     zgen oh-my-zsh
