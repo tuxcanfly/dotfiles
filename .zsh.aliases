@@ -3,3 +3,4 @@ alias tux-session=""
 alias m=./manage.py
 alias flix="pirate-get -C 'peerflix %s --mpv'"
 alias tux-session="mosh tuxcanfly.me -- tmux -2u attach-session -t"
+alias xtime="time -f '%Uu %Ss %er %MkB %C'"
