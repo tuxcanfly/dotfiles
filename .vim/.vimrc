@@ -35,6 +35,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tweekmonster/django-plus.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 
