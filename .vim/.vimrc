@@ -29,12 +29,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim'
 Plug 'leshill/vim-json'
-Plug 'dracula/vim'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'tweekmonster/django-plus.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
@@ -77,10 +75,10 @@ set laststatus      =2
 set completeopt     =menu
 set background      =dark
 
-let g:closetag_default_xml              = 1
-let g:surround_{char2nr("r")}           = "_(u\r)"
-let g:syntastic_python_flake8_args      = '--ignore=E501,E128,E225'
-let g:syntastic_mode_map                = { 'mode': 'passive' }
+let g:closetag_default_xml              =1
+let g:surround_{char2nr("r")}           ="_(u\r)"
+let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
+let g:syntastic_mode_map                ={ 'mode': 'passive' }
 let g:go_bin_path                       = expand("~/bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
@@ -96,7 +94,7 @@ let g:jedi#goto_command                 = "gd"
 let g:tern_map_keys                     = 1
 let g:tern_show_argument_hints          = "on_hold"
 
-colorscheme dracula
+colorscheme spacegray
 
 autocmd     FileType            go          setlocal    noexpandtab
 
@@ -108,7 +106,7 @@ nnoremap ; :
 map <silent>K                           :tabnext<CR>
 map <silent>J                           :tabprevious<CR>
 map <silent><leader>s                   :Gstatus<CR>
-map <silent><leader>d                   :Gdiff --cached<CR>
+map <silent><leader>d                   :Gdiff<CR>
 map <Leader>T                           :tabnew<CR>
 map <leader>g                           :Ggrep <cword>
 

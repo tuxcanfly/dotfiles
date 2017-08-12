@@ -17,6 +17,7 @@ nosetests.xml
 .netrwhist
 .lvimrc
 
+circle.py
 .env
 
 *.db-journal
@@ -26,7 +27,18 @@ node_modules
 .noseids
 .virtualenv
 
-.init.vim-rplugin~
+*.idea
+*.iml
 
-.fonts/fonts.dir
+*.cov
+dcrwallet
+
+*.deb
+
+fonts.dir
+.vscode
+
 .envrc
+.nyc_output
+.tern-project
+/coverage
