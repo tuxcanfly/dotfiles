@@ -17,7 +17,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'scrooloose/syntastic'
+Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/unite.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -26,11 +27,14 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim'
 Plug 'leshill/vim-json'
 Plug 'jpalardy/vim-slime'
+Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'tpope/vim-sleuth'
+Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -77,15 +81,12 @@ set background      =dark
 
 let g:closetag_default_xml              =1
 let g:surround_{char2nr("r")}           ="_(u\r)"
-let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
-let g:syntastic_mode_map                ={ 'mode': 'passive' }
 let g:go_bin_path                       = expand("~/bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
 let g:javascript_plugin_flow            = 1
-let g:jsx_ext_required                  = 0
 let g:slime_target                      = "tmux"
 if exists("$TMUX")
     let g:slime_default_config              = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
@@ -93,8 +94,9 @@ endif
 let g:jedi#goto_command                 = "gd"
 let g:tern_map_keys                     = 1
 let g:tern_show_argument_hints          = "on_hold"
+let g:vimfiler_as_default_explorer      = 1
 
-colorscheme spacegray
+colorscheme iceberg
 
 autocmd     FileType            go          setlocal    noexpandtab
 
