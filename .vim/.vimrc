@@ -20,12 +20,9 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/unite.vim'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim'
 Plug 'leshill/vim-json'
@@ -34,7 +31,11 @@ Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'tpope/vim-sleuth'
-Plug 'cocopon/iceberg.vim'
+Plug 'int3/vim-extradite'
+Plug 'yuttie/hydrangea-vim'
+Plug 'hzchirs/vim-material'
+Plug 'rakr/vim-one'
+Plug 'romainl/Apprentice'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -84,7 +85,6 @@ let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:go_bin_path                       = expand("~/bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
-let g:airline_powerline_fonts           = 1
 let g:go_fmt_command                    = "goimports"
 let g:javascript_plugin_flow            = 1
 let g:slime_target                      = "tmux"
@@ -95,8 +95,10 @@ let g:jedi#goto_command                 = "gd"
 let g:tern_map_keys                     = 1
 let g:tern_show_argument_hints          = "on_hold"
 let g:vimfiler_as_default_explorer      = 1
+highlight ALEError ctermbg=none cterm=underline
 
-colorscheme iceberg
+
+colorscheme apprentice
 
 autocmd     FileType            go          setlocal    noexpandtab
 
