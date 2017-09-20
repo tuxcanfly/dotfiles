@@ -9,6 +9,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.linuxbrew/bin
 
+[ ! -f ~/.zgen/zgen.zsh ] && git clone git@github.com:tarjoilija/zgen ~/.zgen
 source ~/.zgen/zgen.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.zsh.aliases ] && . ~/.zsh.aliases
@@ -19,4 +20,9 @@ if ! zgen saved; then
     zgen save
 fi
 
-eval "$(direnv hook zsh)"
+
+if (( $+commands[direnv] )) ; then
+    eval "$(direnv hook zsh)"
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
