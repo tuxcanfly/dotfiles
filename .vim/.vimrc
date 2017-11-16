@@ -27,6 +27,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim'
 Plug 'leshill/vim-json'
 Plug 'jpalardy/vim-slime'
+Plug 'airblade/vim-gitgutter'
+Plug 'mbbill/undotree'
 Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'jelera/vim-javascript-syntax'
@@ -37,6 +39,7 @@ Plug 'hzchirs/vim-material'
 Plug 'aserebryakov/filestyle'
 Plug 'rakr/vim-one'
 Plug 'romainl/Apprentice'
+Plug 'moll/vim-node'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -99,7 +102,7 @@ let g:vimfiler_as_default_explorer      = 1
 highlight ALEError ctermbg=none cterm=underline
 
 
-colorscheme apprentice
+colorscheme bubblegum-256-dark
 
 autocmd     FileType            go          setlocal    noexpandtab
 
