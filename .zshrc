@@ -1,6 +1,6 @@
 stty -ixon
  
-ZSH_THEME="cypher"
+ZSH_THEME="cloud"
 plugins=(git golang history tmux archlinux z)
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh

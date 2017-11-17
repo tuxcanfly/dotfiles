@@ -102,7 +102,7 @@ let g:vimfiler_as_default_explorer      = 1
 highlight ALEError ctermbg=none cterm=underline
 
 
-colorscheme bubblegum-256-dark
+colorscheme lucario
 
 autocmd     FileType            go          setlocal    noexpandtab
 
@@ -148,4 +148,30 @@ command! -range -nargs=0 Strikethrough   call s:CombineSelection(<line1>, <line2
 function! s:CombineSelection(line1, line2, cp)
     execute 'let char = "\u'.a:cp.'"'
     execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]\%V/&'.char.'/ge'
+endfunction
+
+let g:lightline = {
+    \ 'colorscheme': 'seoul256',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+    \ },
+    \ 'component': {
+    \   'lineinfo': ' %3l:%-2v',
+    \ },
+    \ 'component_function': {
+    \   'readonly': 'LightlineReadonly',
+    \   'fugitive': 'LightlineFugitive'
+    \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
+    \ }
+function! LightlineReadonly()
+        return &readonly ? '' : ''
+endfunction
+function! LightlineFugitive()
+    if &ft !~? 'vimfiler' && exists('*fugitive#head')
+        let branch = fugitive#head()
+        return branch !=# '' ? ''.branch : ''
+    endif
+    return ''
 endfunction
