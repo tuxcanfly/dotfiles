@@ -35,6 +35,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'tpope/vim-sleuth'
 Plug 'int3/vim-extradite'
 Plug 'yuttie/hydrangea-vim'
+Plug 'michaelmalick/vim-colors-bluedrake'
 Plug 'hzchirs/vim-material'
 Plug 'rakr/vim-one'
 Plug 'romainl/Apprentice'
@@ -101,7 +102,7 @@ let g:vimfiler_as_default_explorer      = 1
 highlight ALEError ctermbg=none cterm=underline
 
 
-colorscheme lucario
+colorscheme gruvbox
 
 autocmd     FileType            go          setlocal    noexpandtab
 
@@ -150,7 +151,6 @@ function! s:CombineSelection(line1, line2, cp)
 endfunction
 
 let g:lightline = {
-    \ 'colorscheme': 'seoul256',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
     \ },
