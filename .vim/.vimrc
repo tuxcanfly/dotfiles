@@ -14,36 +14,28 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Shougo/neocomplete.vim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/vimfiler.vim'
-Plug 'Shougo/unite.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-sensible'
+Plug 'ternjs/tern_for_vim'
+Plug 'w0rp/ale'
+Plug 'int3/vim-extradite'
+Plug 'moll/vim-node'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim'
-Plug 'leshill/vim-json'
-Plug 'jpalardy/vim-slime'
-Plug 'airblade/vim-gitgutter'
-Plug 'mbbill/undotree'
-Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'tpope/vim-sleuth'
-Plug 'int3/vim-extradite'
-Plug 'yuttie/hydrangea-vim'
-Plug 'michaelmalick/vim-colors-bluedrake'
-Plug 'hzchirs/vim-material'
-Plug 'rakr/vim-one'
-Plug 'romainl/Apprentice'
-Plug 'moll/vim-node'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 
 syntax on
@@ -86,25 +78,16 @@ set background      =dark
 
 let g:closetag_default_xml              =1
 let g:surround_{char2nr("r")}           ="_(u\r)"
-let g:go_bin_path                       = expand("~/bin")
+let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:go_fmt_command                    = "goimports"
-let g:javascript_plugin_flow            = 1
-let g:slime_target                      = "tmux"
-if exists("$TMUX")
-    let g:slime_default_config              = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
-endif
-let g:jedi#goto_command                 = "gd"
-let g:tern_map_keys                     = 1
-let g:tern_show_argument_hints          = "on_hold"
-let g:vimfiler_as_default_explorer      = 1
-highlight ALEError ctermbg=none cterm=underline
-
 
 colorscheme gruvbox
 
 autocmd     FileType            go          setlocal    noexpandtab
+autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
+autocmd     FileType            go          nmap <F12>  <Plug>(go-def)
 
 """ ---- Keybindings ----
 
@@ -150,27 +133,19 @@ function! s:CombineSelection(line1, line2, cp)
     execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]\%V/&'.char.'/ge'
 endfunction
 
-let g:lightline = {
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-    \ },
-    \ 'component': {
-    \   'lineinfo': ' %3l:%-2v',
-    \ },
-    \ 'component_function': {
-    \   'readonly': 'LightlineReadonly',
-    \   'fugitive': 'LightlineFugitive'
-    \ },
-    \ 'separator': { 'left': '', 'right': '' },
-    \ 'subseparator': { 'left': '', 'right': '' }
-    \ }
-function! LightlineReadonly()
-        return &readonly ? '' : ''
-endfunction
-function! LightlineFugitive()
-    if &ft !~? 'vimfiler' && exists('*fugitive#head')
-        let branch = fugitive#head()
-        return branch !=# '' ? ''.branch : ''
-    endif
-    return ''
-endfunction
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+let g:go_snippet_engine = "neosnippet"
+
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+
+let g:deoplete#enable_at_startup = 1
