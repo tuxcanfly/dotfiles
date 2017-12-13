@@ -29,6 +29,7 @@
     pop = stash pop
     app = stash apply
     cp = ! git log --pretty=format:'%H' -n 1  | xclip -selection clipboard
+    up = pull --all --rebase --autostash
 
 [url "git@github.com"]
 	insteadOf = gh
