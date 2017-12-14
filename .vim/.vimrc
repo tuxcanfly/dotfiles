@@ -19,6 +19,7 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'carlitux/deoplete-ternjs'
+Plug 'sebdah/vim-delve'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
@@ -149,3 +150,4 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 
 let g:deoplete#enable_at_startup = 1
+let g:delve_new_command	 = 'new'
