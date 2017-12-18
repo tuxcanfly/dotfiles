@@ -4,6 +4,7 @@ ZSH_THEME="cloud"
 plugins=(git golang history tmux archlinux z)
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh
+export PATH=$HOME/bin:$PATH
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/bin
