@@ -8,6 +8,7 @@ export PATH=$HOME/bin:$PATH
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.linuxbrew/bin
 
 [ ! -f ~/.zgen/zgen.zsh ] && git clone git@github.com:tarjoilija/zgen ~/.zgen

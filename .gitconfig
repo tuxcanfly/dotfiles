@@ -35,3 +35,8 @@
 	insteadOf = gh
 [url "git@bitbucket.com:"]
 	insteadOf = bb
+[merge]
+    tool = nvr
+
+[mergetool "nvr"]
+    cmd = "nvr -cc tabnew -o \"$BASE\" \"$REMOTE\" -O \"$LOCAL\" \"$MERGED\""
