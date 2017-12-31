@@ -145,6 +145,7 @@ let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_snippet_engine = "neosnippet"
+set conceallevel=0
 
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
