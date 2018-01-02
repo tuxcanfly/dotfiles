@@ -169,8 +169,6 @@ eval "$(alias -p | sed -e 's/alias \([^=][^=]*\)='\''\([^ ][^ ]*\) *\(.*\)'\''/w
 
 unset wrap_alias
 
-stty -ixon
-
 export BROWSER=firefox
 export EDITOR="vim"
 export DEBFULLNAME='Jakh Daven'

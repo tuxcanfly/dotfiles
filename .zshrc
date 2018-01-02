@@ -1,4 +1,4 @@
-stty -ixon
+setopt noflowcontrol
  
 ZSH_THEME="cloud"
 plugins=(git golang history tmux archlinux z)
@@ -10,6 +10,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.linuxbrew/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
