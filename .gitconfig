@@ -1,6 +1,7 @@
 [user]
 	name = "Javed Khan"
 	email = "<tuxcanfly@gmail.com>"
+	signingkey = 7E31745B904584E6
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
@@ -40,3 +41,5 @@
 
 [mergetool "nvr"]
     cmd = "nvr -cc tabnew -o \"$BASE\" \"$REMOTE\" -O \"$LOCAL\" \"$MERGED\""
+[commit]
+	gpgsign = true
