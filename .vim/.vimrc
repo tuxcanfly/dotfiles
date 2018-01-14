@@ -12,6 +12,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-sleuth'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'roxma/nvim-yarp'
@@ -84,7 +85,12 @@ let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:go_fmt_command                    = "goimports"
 
+let g:two_firewatch_italics=1
 colorscheme gruvbox
+highlight Comment cterm=italic
+
+
+let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
