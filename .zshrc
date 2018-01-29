@@ -29,6 +29,8 @@ if ! zgen saved; then
     zgen save
 fi
 
+. ~/.asdf/asdf.sh
+source ~/.asdf/completions/asdf.bash
 
 if (( $+commands[direnv] )) ; then
     eval "$(direnv hook zsh)"
