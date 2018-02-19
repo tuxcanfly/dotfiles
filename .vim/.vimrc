@@ -25,6 +25,7 @@ Plug 'sebdah/vim-delve'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'w0rp/ale'
 Plug 'int3/vim-extradite'
@@ -43,8 +44,6 @@ call plug#end()
 syntax on
 filetype plugin on
 filetype plugin indent on
-
-""" ---- Settings ----
 
 set autoindent                                              " always set autoindenting on
 set autoread
@@ -77,6 +76,7 @@ set path            +=templates
 set laststatus      =2
 set completeopt     =menu
 set background      =dark
+set guicursor       =
 
 let g:closetag_default_xml              =1
 let g:surround_{char2nr("r")}           ="_(u\r)"
@@ -84,9 +84,14 @@ let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:go_fmt_command                    = "goimports"
+let g:nord_italic                       = 1
+let g:nord_italic_comments              = 1
+let g:nord_uniform_status_lines         = 1
+let g:nord_comment_brightness           = 12
+let g:nord_uniform_diff_background      = 1
 
 highlight Comment cterm=italic
-colorscheme apprentice
+colorscheme nord
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
@@ -179,3 +184,64 @@ let g:ale_sign_warning = '⚠'
 
 let g:deoplete#enable_at_startup = 1
 let g:delve_new_command	 = 'new'
+
+"+--- itchyny/lightline.vim ---+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [
+      \     [ 'mode', 'paste' ],
+      \     [ 'fugitive', 'filename' ]
+      \   ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'LightlineFugitive',
+      \   'readonly': 'LightlineReadonly',
+      \   'modified': 'LightlineModified',
+      \   'filename': 'LightlineFilename'
+      \ },
+      \ 'separator': {
+      \   'left': '',
+      \   'right': ''
+      \ },
+      \ 'subseparator': {
+      \   'left': '',
+      \   'right': ''
+      \ }
+    \ }
+
+function! LightlineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? ' '.branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightlineFilename()
+  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
