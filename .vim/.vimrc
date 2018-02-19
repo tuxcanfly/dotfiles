@@ -86,7 +86,7 @@ let g:go_doc_keywordprg_enabled         = 0
 let g:go_fmt_command                    = "goimports"
 
 highlight Comment cterm=italic
-colorscheme gruvbox
+colorscheme apprentice
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>

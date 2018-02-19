@@ -1,6 +1,6 @@
 setopt noflowcontrol
  
-ZSH_THEME="cloud"
+ZSH_THEME="sunrise"
 plugins=(git golang history tmux archlinux z)
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh
