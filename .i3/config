@@ -1,176 +1,143 @@
-# Set modifier key to alt
-set $mod Mod1
+# set modifier
+set $super Mod4
+set $alt Mod1
 
-# Set display resolution
-exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 60
+# set font
+font pango: Noto Sans 8
 
-# Apply .Xresource. As far as I know, only needed here if using starx (dont have a login manager)
-exec_always --no-startup-id xrdb ~/.Xresources
+# Use Mouse+$super to drag floating windows to their wanted position
+floating_modifier $super
 
-# Apply a background different than the one used by wal
-# If this isn't needed, remove it and remove -n flag from the above command
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wally.jpg
+#autostart
+exec --no-startup-id hsetroot -center ~/Pictures/wally.jpg
+exec --no-startup-id xsettingsd &
+exec --no-startup-id setxkbmap -layout us -option caps:escape
+exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id compton -b
 
-# Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# start a terminal
+bindsym $super+Return exec i3-sensible-terminal
 
-exec_always --no-startup-id setxkbmap -layout us -option caps:escape
+# start dmenu (a program launcher)
+bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
+bindsym Control+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
 
-exec_always --no-startup-id compton
+# common apps keybinds
+bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
+bindsym $alt+Control+l exec i3lock -i ~/Pictures/wally.jpg
+bindsym $super+w exec firefox
 
-font pango:MesloLGM Nerd Font 8
+#change volume
+bindsym XF86AudioRaiseVolume exec amixer -c 0 set PCM 2dB+
+bindsym XF86AudioLowerVolume exec amixer -c 0 set PCM 2dB-
+bindsym XF86AudioMute exec amixer set Master toggle
 
-# Press mod key to be able to resize floating windows
-floating_modifier $mod
+# music control
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioStop exec mpc stop
 
-# Open new terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# kill focused window
+bindsym $super+q kill
+bindsym $alt+F4 kill
 
-#Close window
-bindsym $mod+Shift+q kill
+# change focus
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
 
-# Open dmenu 
-bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
+# move focused window
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
 
-# Change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# split in horizontal orientation
+bindsym $super+Control+h split h
 
-# Alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# split in vertical orientation
+bindsym $super+Control+v split v
 
-# Move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# enter fullscreen mode for the focused container
+bindsym $super+f fullscreen toggle
 
-# Alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# change container layout split
+bindsym $super+s layout toggle split
 
-# Split in horizontal orientation
-bindsym $mod+h split h
+# toggle tiling / floating
+bindsym $super+space floating toggle
 
-# Split in vertical orientation
-bindsym $mod+v split v
+# change focus between tiling / floating windows
+bindsym $super+Shift+space focus mode_toggle
 
-# Enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# switch to workspace
+bindsym Shift+Control+h workspace next
+bindsym Shift+Control+l workspace prev
+bindsym $super+1 workspace 1
+bindsym $super+2 workspace 2
+bindsym $super+3 workspace 3
+bindsym $super+4 workspace 4
+bindsym $super+5 workspace 5
+bindsym $super+6 workspace 6
 
-# Change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# move focused container to workspace
+bindsym $super+Shift+1 move container to workspace 1
+bindsym $super+Shift+2 move container to workspace 2
+bindsym $super+Shift+3 move container to workspace 3
+bindsym $super+Shift+4 move container to workspace 4
+bindsym $super+Shift+5 move container to workspace 5
+bindsym $super+Shift+6 move container to workspace 6
 
-# Toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $super+Shift+r restart
 
-# Change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# exit i3
+bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
 
-# Focus the parent container
-bindsym $mod+a focus parent
-
-# Focus the child container
-#bindsym $mod+d focus child
-
-# Switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-# Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-
-# Reload the configuration file
-bindsym $mod+Shift+c reload
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-# Resize window (you can also use the mouse for that)
+# resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
-
-        # back to normal: Enter or Escape
         bindsym Return mode "default"
-        bindsym Escape mode "default"
 }
+bindsym $super+r mode "resize"
 
-bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# Finds out, if available)
+# panel
 bar {
+	colors {
+        background #2f343f
+        statusline #2f343f
+        separator #4b5262
+
+		# colour of border, background, and text
+        focused_workspace	#2f343f	#bf616a	#d8dee8
+        active_workspace	#2f343f	#2f343f	#d8dee8
+        inactive_workspace	#2f343f	#2f343f	#d8dee8
+        urgent_workspace	#2f343f	#ebcb8b	#2f343f
+    }
         status_command i3status
-        mode invisible
-        font pango:Overpass Regular 8
 }
 
-new_window pixel 2
+# window rules, you can find the window class using xprop
+for_window [class=".*"] border pixel 4
+assign [class=URxvt] 1
+assign [class=Firefox|Transmission-gtk] 2
+assign [class=Thunar|File-roller] 3
+assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
+assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
+assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
+for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
-hide_edge_borders vertical
-
-# Color variables
-set $unfocused_border #1D1F21
-set $focused_border #CC6666
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.unfocused        #ffffff #ffffff #ffffff #ffffff   $unfocused_border
-client.urgent           #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
-
-client.background       #ffffff
-
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# colour of border, background, text, indicator, and child_border
+client.focused			#bf616a #2f343f #d8dee8 #bf616a #d8dee8
+client.focused_inactive	#2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused		#2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent			#2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder		#2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background		#2f343f
