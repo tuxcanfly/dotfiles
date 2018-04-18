@@ -91,7 +91,7 @@ let g:nord_comment_brightness           = 12
 let g:nord_uniform_diff_background      = 1
 
 highlight Comment cterm=italic
-colorscheme gruvbox
+colorscheme apprentice
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
