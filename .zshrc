@@ -39,7 +39,7 @@ fi
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-[ -f /etc/profile.d/fzf.zsh ] && source /etc/profile.d/fzf.zsh
-[ -f ~/.fzf.colors ] && source ~/.fzf.colors
-
+# [ -f /etc/profile.d/fzf.zsh ] && source /etc/profile.d/fzf.zsh
+#
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.colors ] && source ~/.fzf.colors
