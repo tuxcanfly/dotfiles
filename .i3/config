@@ -98,7 +98,7 @@ bindsym $super+Shift+6 move container to workspace 6
 bindsym $super+Shift+r restart
 
 # exit i3
-bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+bindsym $super+Shift+q exec ~/bin/i3-exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

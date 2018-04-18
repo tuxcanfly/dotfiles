@@ -25,6 +25,7 @@ Plug 'sebdah/vim-delve'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'w0rp/ale'
@@ -90,8 +91,18 @@ let g:nord_uniform_status_lines         = 1
 let g:nord_comment_brightness           = 12
 let g:nord_uniform_diff_background      = 1
 
+if has("termguicolors")
+    set termguicolors
+endif
+
 highlight Comment cterm=italic
-colorscheme apprentice
+colorscheme base16-default-dark
+
+if filereadable(expand("~/.vim/colorscheme.vim"))
+  let base16colorspace=256
+  source ~/.vim/colorscheme.vim
+endif
+
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
@@ -186,8 +197,8 @@ let g:deoplete#enable_at_startup = 1
 let g:delve_new_command	 = 'new'
 
 "+--- itchyny/lightline.vim ---+
+"\ 'colorscheme': 'nord',
 let g:lightline = {
-      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [
       \     [ 'mode', 'paste' ],

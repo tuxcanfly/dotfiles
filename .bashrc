@@ -183,3 +183,4 @@ GOPATH=~/Work/go
 PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.colors ] && source ~/.fzf.colors
