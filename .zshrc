@@ -1,6 +1,6 @@
 setopt noflowcontrol
  
-ZSH_THEME="nanotech"
+ZSH_THEME="robbyrussell"
 plugins=(git golang history tmux archlinux z)
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh
@@ -36,10 +36,8 @@ if (( $+commands[direnv] )) ; then
     eval "$(direnv hook zsh)"
 fi
 
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+#BASE16_SHELL=$HOME/.config/base16-shell/
+#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# [ -f /etc/profile.d/fzf.zsh ] && source /etc/profile.d/fzf.zsh
-#
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
