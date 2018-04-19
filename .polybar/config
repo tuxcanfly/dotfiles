@@ -2,7 +2,7 @@
 
 font-0 = "Inconsolata\-dz for Powerline:pixelsize=10;2.25"
 
-monitor = "HDMI-0"
+monitor = "eDP-1"
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
