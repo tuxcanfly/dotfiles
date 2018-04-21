@@ -1,5 +1,5 @@
-URxvt.font                  : xft:MesloLGM Nerd Font:size=9:antialias=true
-URxvt.boldFont              : xft:MesloLGM Nerd Font:bold:size=9:antialias=true
+!URxvt.font                  : xft:MesloLGM Nerd Font:size=9:antialias=true
+!URxvt.boldFont              : xft:MesloLGM Nerd Font:bold:size=9:antialias=true
 URxvt*eightBitInput         : true
 
 URxvt.cursorBlink           : 1
@@ -18,5 +18,13 @@ URxvt.keysym.Control-Up     : \033[1;5A
 URxvt.keysym.Control-Down   : \033[1;5B
 URxvt.keysym.Control-Left   : \033[1;5D
 URxvt.keysym.Control-Right  : \033[1;5C
+URxvt.letterSpace           : 0
+
+URxvt.perl-ext-common       : default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher   : firefox
+URxvt.url-select.underline  : true
+URxvt.keysym.M-u            : perl:url-select:select_next
+URxvt.keysym.M-Escape       : perl:keyboard-select:activate
+URxvt.keysym.M-s            : perl:keyboard-select:search
 
 # include ".xcolors/@active"
