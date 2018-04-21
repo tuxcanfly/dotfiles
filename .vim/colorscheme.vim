@@ -1,1 +1,1 @@
-colorscheme base16-darktooth
+colorscheme base16-onedark
