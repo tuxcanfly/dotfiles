@@ -1,1 +1,1 @@
-colorscheme base16-summerfruit-dark
+colorscheme base16-darktooth
