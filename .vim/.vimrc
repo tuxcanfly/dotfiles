@@ -89,12 +89,8 @@ let g:nord_uniform_status_lines         = 1
 let g:nord_comment_brightness           = 12
 let g:nord_uniform_diff_background      = 1
 
-if has("termguicolors")
-    set termguicolors
-endif
-
 highlight Comment cterm=italic
-colorscheme base16-default-dark
+colorscheme solarized
 
 if filereadable(expand("~/.vim/colorscheme.vim"))
   let base16colorspace=256
