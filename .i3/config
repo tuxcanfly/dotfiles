@@ -20,6 +20,7 @@ exec --no-startup-id betterlockscreen -w
 exec --no-startup-id greenclip daemon
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id redshift
+exec --no-startup-id xset r rate 500 30
 
 # start a terminal
 bindsym $super+Return exec termite
