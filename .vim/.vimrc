@@ -35,10 +35,20 @@ Plug 'maximbaz/lightline-ale'
 Plug 'Chiel92/vim-autoformat'
 Plug 'skwp/greplace.vim'
 Plug 'andymass/vim-matchup'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/yajs.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 syntax on

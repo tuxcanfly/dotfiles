@@ -37,11 +37,19 @@ set editor = "vim"
 set charset = "utf-8"
 set record = ''
 
-set pgp_autosign = no
-set pgp_auto_decode = yes
-set pgp_replyencrypt = yes
-set pgp_use_gpg_agent = yes
-set pgp_sign_as = 745B904584E6 
-set pgp_timeout = 3600
-set crypt_autosign = yes
+# Use GPGME
+set crypt_use_gpgme = yes
+
+# Sign replies to signed email
+set crypt_replysign = yes
+
+# Encrypt replies to encrypted email
 set crypt_replyencrypt = yes
+
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+
+# Attempt to verify email signatures automatically
+set crypt_verify_sig = yes
+
+set pgp_sign_as = 0x04584E6

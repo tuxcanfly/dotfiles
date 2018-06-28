@@ -16,7 +16,6 @@ exec --no-startup-id xsettingsd &
 exec --no-startup-id setxkbmap -layout us -option caps:escape
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton -b
-exec --no-startup-id betterlockscreen -w
 exec --no-startup-id greenclip daemon
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id redshift
@@ -33,8 +32,7 @@ bindsym $alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -
 
 # common apps keybinds
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
-# bindsym $alt+Control+l exec i3lock -i ~/Pictures/wally.jpg
-bindsym $alt+Control+l exec betterlockscreen -l dimblur
+bindsym $alt+Control+l exec 'i3-lock -b -i ~/Pictures/wally.jpg'
 bindsym $super+w exec luakit
 
 #change volume
