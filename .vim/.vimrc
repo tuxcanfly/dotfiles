@@ -87,18 +87,16 @@ set laststatus      =2
 set completeopt     =menu
 set background      =dark
 set guicursor       =
+set noshowmode
 
-let g:closetag_default_xml              =1
+let g:closetag_default_xml              = 1
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 let g:go_fmt_command                    = "goimports"
-let g:nord_italic                       = 1
-let g:nord_italic_comments              = 1
-let g:nord_uniform_status_lines         = 1
-let g:nord_comment_brightness           = 12
-let g:nord_uniform_diff_background      = 1
+let g:tern_show_argument_hints          = "on_move"
+let g:tern_map_keys                     = 1
 
 highlight Comment cterm=italic
 colorscheme solarized

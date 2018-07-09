@@ -8,7 +8,7 @@ mouse_autohide=true
 scrollback_lines=50000
 search_wrap=true
 visible_bell=false
-font=monofur for Powerline 11
+font=Droid Sans Mono Slashed for Powerline 11
 [colors]
 # Base16 Paraiso
 # Author: Jan T. Sott
