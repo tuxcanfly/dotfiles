@@ -10,7 +10,6 @@ font pango: Inconsolata\-dz for Powerline 8
 floating_modifier $super
 
 #autostart
-exec --no-startup-id hsetroot -center ~/Pictures/wally.jpg
 exec --no-startup-id xrdb ~/.Xdefaults
 exec --no-startup-id xsettingsd &
 exec --no-startup-id setxkbmap -layout us -option caps:escape
@@ -19,6 +18,9 @@ exec --no-startup-id compton -b
 exec --no-startup-id greenclip daemon
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id redshift
+exec --no-startup-id hsetroot -center ~/Pictures/wally.jpg
+exec --no-startup-id wicd-cli --wireless -c
+exec --no-startup-id wally -plugin natgeo --force
 exec --no-startup-id xset r rate 500 30
 exec --no-startup-id syncthing
 
@@ -102,7 +104,7 @@ bindsym $super+Shift+6 move container to workspace 6
 bindsym $super+Shift+r restart
 
 # exit i3
-bindsym $super+Shift+q exec ~/bin/i3-exit
+bindsym $super+Shift+q exec ~/.bin/i3-exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

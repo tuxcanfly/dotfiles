@@ -1,1 +1,1 @@
-colorscheme base16-paraiso
+colorscheme base16-solarized-dark
