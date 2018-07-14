@@ -47,3 +47,4 @@ fonts.dir
 .local/share/luakit/command-history
 .local/share/luakit/local_storage/
 .local/share/luakit/recovery_session
+.bin/
