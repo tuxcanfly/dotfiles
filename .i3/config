@@ -34,7 +34,7 @@ bindsym $alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -
 
 # common apps keybinds
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
-bindsym $alt+Control+l exec 'i3-lock -b -i ~/Pictures/wally.jpg'
+bindsym $alt+Control+l exec 'i3lock -b -i ~/Pictures/wally.jpg'
 bindsym $super+w exec luakit
 
 #change volume

@@ -381,8 +381,11 @@ separator_color = "#c0c0c0"
 frame_color = "#a39e9b"
 separator_color = "#a39e9b"
 
-frame_color = "#93a1a1"
-separator_color = "#93a1a1"
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#a39e9b"
+separator_color = "#a39e9b"
 
 [base16_low]
     msg_urgency = low
