@@ -1,0 +1,2 @@
+xset 600 &
+xss-lock -- /usr/bin/slock &

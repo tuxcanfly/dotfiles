@@ -48,3 +48,5 @@ fonts.dir
 .local/share/luakit/local_storage/
 .local/share/luakit/recovery_session
 .bin/
+
+*.bac

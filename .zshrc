@@ -40,3 +40,7 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /tmp/yaourt-tmp-tuxcanfly/aur-augur-git/src/augur-app/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /tmp/yaourt-tmp-tuxcanfly/aur-augur-git/src/augur-app/node_modules/tabtab/.completions/electron-forge.zsh
