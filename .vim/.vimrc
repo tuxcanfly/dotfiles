@@ -102,10 +102,10 @@ let g:tern_map_keys                     = 1
 highlight Comment cterm=italic
 colorscheme solarized
 
-if filereadable(expand("~/.vim/colorscheme.vim"))
-  let base16colorspace=256
-  source ~/.vim/colorscheme.vim
-endif
+"if filereadable(expand("~/.vim/colorscheme.vim"))
+  "let base16colorspace=256
+  "source ~/.vim/colorscheme.vim
+"endif
 
 
 autocmd     FileType            go          setlocal    noexpandtab
@@ -200,63 +200,3 @@ let g:ale_sign_warning = '⚠'
 let g:deoplete#enable_at_startup = 1
 let g:delve_new_command	 = 'new'
 
-"+--- itchyny/lightline.vim ---+
-"\ 'colorscheme': 'nord',
-let g:lightline = {
-      \ 'active': {
-      \   'left': [
-      \     [ 'mode', 'paste' ],
-      \     [ 'fugitive', 'filename' ]
-      \   ]
-      \ },
-      \ 'component_function': {
-      \   'fugitive': 'LightlineFugitive',
-      \   'readonly': 'LightlineReadonly',
-      \   'modified': 'LightlineModified',
-      \   'filename': 'LightlineFilename'
-      \ },
-      \ 'separator': {
-      \   'left': '',
-      \   'right': ''
-      \ },
-      \ 'subseparator': {
-      \   'left': '',
-      \   'right': ''
-      \ }
-    \ }
-
-function! LightlineModified()
-  if &filetype == "help"
-    return ""
-  elseif &modified
-    return "+"
-  elseif &modifiable
-    return ""
-  else
-    return ""
-  endif
-endfunction
-
-function! LightlineReadonly()
-  if &filetype == "help"
-    return ""
-  elseif &readonly
-    return ""
-  else
-    return ""
-  endif
-endfunction
-
-function! LightlineFugitive()
-  if exists("*fugitive#head")
-    let branch = fugitive#head()
-    return branch !=# '' ? ' '.branch : ''
-  endif
-  return ''
-endfunction
-
-function! LightlineFilename()
-  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
-       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-       \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
-endfunction

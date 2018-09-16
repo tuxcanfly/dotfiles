@@ -1,1 +1,1 @@
-colorscheme base16-gruvbox-dark-pale
+colorscheme base16-solarized-dark
