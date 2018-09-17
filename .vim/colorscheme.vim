@@ -1,1 +1,1 @@
-colorscheme base16-monokai
+colorscheme base16-tomorrow-night

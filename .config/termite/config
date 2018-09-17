@@ -8,89 +8,52 @@ mouse_autohide=true
 scrollback_lines=50000
 search_wrap=true
 visible_bell=false
-font=Monofur 9
+font=Monofur 12
 [colors]
-# Base16 Monokai
-# Author: Wimer Hazenberg (http://www.monokai.nl)
+# Base16 Tomorrow Night
+# Author: Chris Kempson (http://chriskempson.com)
 
-foreground      = #f8f8f2
-foreground_bold = #f5f4f1
-cursor          = #f5f4f1
-background      = #272822
+foreground      = #c5c8c6
+foreground_bold = #e0e0e0
+cursor          = #e0e0e0
+background      = #1d1f21
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #272822
-color8  = #75715e
-color7  = #f8f8f2
-color15 = #f9f8f5
+color0  = #1d1f21
+color8  = #969896
+color7  = #c5c8c6
+color15 = #ffffff
 
 # Red
-color1  = #f92672
-color9  = #f92672
+color1  = #cc6666
+color9  = #cc6666
 
 # Green
-color2  = #a6e22e
-color10 = #a6e22e
+color2  = #b5bd68
+color10 = #b5bd68
 
 # Yellow
-color3  = #f4bf75
-color11 = #f4bf75
+color3  = #f0c674
+color11 = #f0c674
 
 # Blue
-color4  = #66d9ef
-color12 = #66d9ef
+color4  = #81a2be
+color12 = #81a2be
 
 # Purple
-color5  = #ae81ff
-color13 = #ae81ff
+color5  = #b294bb
+color13 = #b294bb
 
 # Teal
-color6  = #a1efe4
-color14 = #a1efe4
+color6  = #8abeb7
+color14 = #8abeb7
 
 # Extra colors
-color16 = #fd971f
-color17 = #cc6633
-color18 = #383830
-color19 = #49483e
-color20 = #a59f85
-color21 = #f5f4f1
-=======
-color0  = #002b36
-color8  = #657b83
-color7  = #93a1a1
-color15 = #fdf6e3
-
-# Red
-color1  = #dc322f
-color9  = #dc322f
-
-# Green
-color2  = #859900
-color10 = #859900
-
-# Yellow
-color3  = #b58900
-color11 = #b58900
-
-# Blue
-color4  = #268bd2
-color12 = #268bd2
-
-# Purple
-color5  = #6c71c4
-color13 = #6c71c4
-
-# Teal
-color6  = #2aa198
-color14 = #2aa198
-
-# Extra colors
-color16 = #cb4b16
-color17 = #d33682
-color18 = #073642
-color19 = #586e75
-color20 = #839496
-color21 = #eee8d5
+color16 = #de935f
+color17 = #a3685a
+color18 = #282a2e
+color19 = #373b41
+color20 = #b4b7b4
+color21 = #e0e0e0
