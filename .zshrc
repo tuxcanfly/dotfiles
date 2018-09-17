@@ -41,6 +41,14 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
 
+if [ "$TMUX" = "" ]; then tmux new; fi
+
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /tmp/yaourt-tmp-tuxcanfly/aur-augur-git/src/augur-app/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /tmp/yaourt-tmp-tuxcanfly/aur-augur-git/src/augur-app/node_modules/tabtab/.completions/electron-forge.zsh
+
+PATH="/home/tuxcanfly/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/tuxcanfly/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/tuxcanfly/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/tuxcanfly/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/tuxcanfly/perl5"; export PERL_MM_OPT;
