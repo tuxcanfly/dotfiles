@@ -1,0 +1,14 @@
+pane	0	1	:vim	1	:*	1	:/home/tuxcanfly/Work/bcoin	1	vim	:vim
+pane	0	1	:vim	1	:*	2	:/home/tuxcanfly/Work/bcoin	0	zsh	:
+pane	0	2	:mosh-client	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh tuxcanfly.me -- tmux -2u attach-session -t irssi
+pane	0	3	:ssh	0	:	1	:/home/tuxcanfly	1	ssh	:ssh -t bcoin@173.230.147.47 tmux attach
+pane	0	4	:ssh	0	:	1	:/home/tuxcanfly	1	ssh	:ssh -t bithub.shop tmux attach
+pane	0	5	:ssh	0	:	1	:/home/tuxcanfly	1	ssh	:ssh -t okbit.co.in tmux attach
+pane	0	6	:ssh	0	:-	1	:/home/tuxcanfly	1	ssh	:ssh -t tuxcanfly.me tmux attach
+window	0	1	1	:*	e557,319x76,0,0{160x76,0,0,0,158x76,161,0,1}
+window	0	2	0	:	cd7f,319x76,0,0,2
+window	0	3	0	:	cd80,319x76,0,0,3
+window	0	4	0	:	cd81,319x76,0,0,4
+window	0	5	0	:	cd82,319x76,0,0,5
+window	0	6	0	:-	cd83,319x76,0,0,6
+state	0	
