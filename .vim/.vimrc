@@ -38,6 +38,7 @@ Plug 'skwp/greplace.vim'
 Plug 'andymass/vim-matchup'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
@@ -100,13 +101,7 @@ let g:tern_show_argument_hints          = "on_move"
 let g:tern_map_keys                     = 1
 
 highlight Comment cterm=italic
-colorscheme solarized
-
-"if filereadable(expand("~/.vim/colorscheme.vim"))
-  "let base16colorspace=256
-  "source ~/.vim/colorscheme.vim
-"endif
-
+colorscheme nord
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
@@ -199,4 +194,4 @@ let g:ale_sign_warning = '⚠'
 
 let g:deoplete#enable_at_startup = 1
 let g:delve_new_command	 = 'new'
-
+source ~/.vim/.lightlinerc

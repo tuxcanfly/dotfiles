@@ -408,17 +408,23 @@ separator_color = "#a3a3a3"
 frame_color = "#93a1a1"
 separator_color = "#93a1a1"
 
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#f8f8f2"
+separator_color = "#f8f8f2"
+
 [base16_low]
     msg_urgency = low
-    background = "#073642"
-    foreground = "#657b83"
+    background = "#383830"
+    foreground = "#75715e"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#586e75"
-    foreground = "#93a1a1"
+    background = "#49483e"
+    foreground = "#f8f8f2"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#dc322f"
-    foreground = "#eee8d5"
+    background = "#f92672"
+    foreground = "#f5f4f1"
