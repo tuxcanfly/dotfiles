@@ -39,6 +39,7 @@ Plug 'andymass/vim-matchup'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs.vim'
 Plug 'jacoborus/tender.vim'
+Plug 'wellle/targets.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
@@ -101,7 +102,13 @@ let g:tern_show_argument_hints          = "on_move"
 let g:tern_map_keys                     = 1
 
 highlight Comment cterm=italic
-colorscheme nord
+colorscheme gruvbox
+
+if filereadable(expand("~/.vim/colorscheme.vim"))
+  let base16colorspace=256
+  source ~/.vim/colorscheme.vim
+endif
+
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
@@ -189,9 +196,39 @@ let g:go_auto_type_info = 1
 let g:go_snippet_engine = "neosnippet"
 set conceallevel=0
 
+let g:gitgutter_sign_added='┃'
+let g:gitgutter_sign_modified='┃'
+let g:gitgutter_sign_removed='◢'
+let g:gitgutter_sign_removed_first_line='◥'
+let g:gitgutter_sign_modified_removed='◢'
+
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#omni#functions = {}
+let g:deoplete#omni#functions.javascript = [
+ \ 'tern#Complete'
+\]
+
+" Set bin if you have many instalations
+let g:deoplete#sources#ternjs#tern_bin = '~/.bin/tern'
+let g:deoplete#sources#ternjs#timeout = 1
+
+" If completions should be returned when inside a literal. Default: 1
+" let g:deoplete#sources#ternjs#in_literal = 0
+
+" let g:deoplete#sources#ternjs#guess = 0
+" let g:deoplete#sources#ternjs#sort = 0
+" let g:deoplete#sources#ternjs#expand_word_forward = 0
+
+
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#depths = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#filter = 0
+let g:deoplete#sources#ternjs#case_insensitive = 1
+let g:deoplete#sources#ternjs#include_keywords = 1
+let g:deoplete#sources#ternjs#filetypes = [ 'jsx',  'javascript.jsx' ]
+" let g:deoplete#sources#ternjs#omit_object_prototype = 0
 let g:delve_new_command	 = 'new'
 source ~/.vim/.lightlinerc

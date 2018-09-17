@@ -6,5 +6,6 @@
 },
 {
 ["window.home_page"]="https://www.google.com",
+["session.always_save"]=true,
 },
 }
