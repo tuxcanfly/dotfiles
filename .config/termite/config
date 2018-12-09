@@ -8,7 +8,7 @@ mouse_autohide=true
 scrollback_lines=50000
 search_wrap=true
 visible_bell=false
-font=Monofur 12
+font=MesloLGM Nerd Font 12
 [colors]
 # Base16 Tomorrow Night
 # Author: Chris Kempson (http://chriskempson.com)

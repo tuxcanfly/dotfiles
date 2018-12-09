@@ -41,8 +41,10 @@ Plug 'othree/yajs.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'wellle/targets.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'sodapopcan/vim-twiggy'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
