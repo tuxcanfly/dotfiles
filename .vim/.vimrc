@@ -16,7 +16,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-sensible'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
-Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'sebdah/vim-delve'
@@ -46,6 +45,11 @@ Plug 'sodapopcan/vim-twiggy'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
+Plug 'ncm2/ncm2'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -90,7 +94,7 @@ set wildmenu
 set clipboard       =unnamedplus
 set path            +=templates
 set laststatus      =2
-set completeopt     =menu
+set completeopt     =noinsert,menuone,noselect
 set background      =dark
 set guicursor       =
 set noshowmode
@@ -235,3 +239,16 @@ let g:deoplete#sources#ternjs#filetypes = [ 'jsx',  'javascript.jsx' ]
 " let g:deoplete#sources#ternjs#omit_object_prototype = 0
 let g:delve_new_command	 = 'new'
 source ~/.vim/.lightlinerc
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
