@@ -8,52 +8,74 @@ mouse_autohide=true
 scrollback_lines=50000
 search_wrap=true
 visible_bell=false
-font=MesloLGM Nerd Font 12
+font=Hurmit 11
+background= #101010
+foreground= #d0d0d0
+#foreground= #66ff66
+#highlight = #505050
+cursor = #66ff66
+color0= #101010
+color1= #960050
+color2= #66aa11
+color3= #c47f2c
+color4= #30309b
+color5= #7e40a5
+color6= #3579a8
+color7= #9999aa
+color8= #303030
+color9= #ff0090
+color10= #80ff00
+color11= #ffba68
+color12= #5f5fee
+color13= #bb88dd
+color14= #4eb4fa
+color15= #d0d0d0
 [colors]
-# Base16 Tomorrow Night
-# Author: Chris Kempson (http://chriskempson.com)
+# Base16 Circus
+# Author: Stephan Boyer (https://github.com/stepchowfun) and Esther Wang (https://github.com/ewang12)
 
-foreground      = #c5c8c6
-foreground_bold = #e0e0e0
-cursor          = #e0e0e0
-background      = #1d1f21
+foreground          = #a7a7a7
+foreground_bold     = #808080
+cursor              = #808080
+cursor_foreground   = #191919
+background          = rgba(25, 25, 25)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #1d1f21
-color8  = #969896
-color7  = #c5c8c6
+color0  = #191919
+color8  = #5f5a60
+color7  = #a7a7a7
 color15 = #ffffff
 
 # Red
-color1  = #cc6666
-color9  = #cc6666
+color1  = #dc657d
+color9  = #dc657d
 
 # Green
-color2  = #b5bd68
-color10 = #b5bd68
+color2  = #84b97c
+color10 = #84b97c
 
 # Yellow
-color3  = #f0c674
-color11 = #f0c674
+color3  = #c3ba63
+color11 = #c3ba63
 
 # Blue
-color4  = #81a2be
-color12 = #81a2be
+color4  = #639ee4
+color12 = #639ee4
 
 # Purple
-color5  = #b294bb
-color13 = #b294bb
+color5  = #b888e2
+color13 = #b888e2
 
 # Teal
-color6  = #8abeb7
-color14 = #8abeb7
+color6  = #4bb1a7
+color14 = #4bb1a7
 
 # Extra colors
-color16 = #de935f
-color17 = #a3685a
-color18 = #282a2e
-color19 = #373b41
-color20 = #b4b7b4
-color21 = #e0e0e0
+color16 = #4bb1a7
+color17 = #b888e2
+color18 = #202020
+color19 = #303030
+color20 = #505050
+color21 = #808080

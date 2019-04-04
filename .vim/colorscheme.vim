@@ -1,1 +1,1 @@
-colorscheme base16-tomorrow-night
+colorscheme base16-circus

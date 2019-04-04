@@ -1,4 +1,5 @@
 set nocompatible
+set hidden
 filetype off
 
 call plug#begin()
@@ -17,7 +18,6 @@ Plug 'tpope/vim-sensible'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'carlitux/deoplete-ternjs'
 Plug 'sebdah/vim-delve'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -45,20 +45,15 @@ Plug 'sodapopcan/vim-twiggy'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
-Plug 'ncm2/ncm2'
+Plug 'ajmwagar/vim-deus'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
 
 syntax on
@@ -94,7 +89,7 @@ set wildmenu
 set clipboard       =unnamedplus
 set path            +=templates
 set laststatus      =2
-set completeopt     =noinsert,menuone,noselect
+"set completeopt     =noinsert,menuone,noselect
 set background      =dark
 set guicursor       =
 set noshowmode
@@ -115,7 +110,6 @@ if filereadable(expand("~/.vim/colorscheme.vim"))
   let base16colorspace=256
   source ~/.vim/colorscheme.vim
 endif
-
 
 autocmd     FileType            go          setlocal    noexpandtab
 autocmd     FileType            go          nmap <F9>   F9:GoCoverageToggle     -short<cr>
@@ -212,43 +206,16 @@ let g:gitgutter_sign_modified_removed='◢'
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 
-let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.javascript = [
- \ 'tern#Complete'
-\]
-
-" Set bin if you have many instalations
-let g:deoplete#sources#ternjs#tern_bin = '~/.bin/tern'
-let g:deoplete#sources#ternjs#timeout = 1
-
-" If completions should be returned when inside a literal. Default: 1
-" let g:deoplete#sources#ternjs#in_literal = 0
-
-" let g:deoplete#sources#ternjs#guess = 0
-" let g:deoplete#sources#ternjs#sort = 0
-" let g:deoplete#sources#ternjs#expand_word_forward = 0
-
-
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#sources#ternjs#depths = 1
-let g:deoplete#sources#ternjs#docs = 1
-let g:deoplete#sources#ternjs#filter = 0
-let g:deoplete#sources#ternjs#case_insensitive = 1
-let g:deoplete#sources#ternjs#include_keywords = 1
-let g:deoplete#sources#ternjs#filetypes = [ 'jsx',  'javascript.jsx' ]
-" let g:deoplete#sources#ternjs#omit_object_prototype = 0
 let g:delve_new_command	 = 'new'
 source ~/.vim/.lightlinerc
 
-" Required for operations modifying multiple buffers like rename.
-set hidden
 
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
     \ }
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-" Or map each action separately
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+source ~/.vim/coc.vim
