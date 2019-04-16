@@ -89,7 +89,7 @@ set wildmenu
 set clipboard       =unnamedplus
 set path            +=templates
 set laststatus      =2
-"set completeopt     =noinsert,menuone,noselect
+set completeopt     =noinsert,menuone,noselect
 set background      =dark
 set guicursor       =
 set noshowmode
