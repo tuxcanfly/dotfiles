@@ -15,7 +15,7 @@ source ~/.asdf/completions/asdf.bash
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh
 export PATH=$HOME/bin:$PATH
-export GOPATH=$HOME/Work/go
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/.local/bin
