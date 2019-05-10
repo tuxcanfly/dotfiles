@@ -43,5 +43,3 @@
     cmd = "nvr -cc tabnew -o \"$BASE\" \"$REMOTE\" -O \"$LOCAL\" \"$MERGED\""
 [commit]
 	gpgsign = true
-#[url "git@github.com:"]
-#	insteadOf = https://github.com/
