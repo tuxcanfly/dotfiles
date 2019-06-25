@@ -31,51 +31,51 @@ color13= #bb88dd
 color14= #4eb4fa
 color15= #d0d0d0
 [colors]
-# Base16 Circus
-# Author: Stephan Boyer (https://github.com/stepchowfun) and Esther Wang (https://github.com/ewang12)
+# Base16 Porple
+# Author: Niek den Breeje (https://github.com/AuditeMarlow)
 
-foreground          = #a7a7a7
-foreground_bold     = #808080
-cursor              = #808080
-cursor_foreground   = #191919
-background          = rgba(25, 25, 25)
+foreground          = #d8d8d8
+foreground_bold     = #e8e8e8
+cursor              = #e8e8e8
+cursor_foreground   = #292c36
+background          = rgba(41, 44, 54)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #191919
-color8  = #5f5a60
-color7  = #a7a7a7
-color15 = #ffffff
+color0  = #292c36
+color8  = #65568a
+color7  = #d8d8d8
+color15 = #f8f8f8
 
 # Red
-color1  = #dc657d
-color9  = #dc657d
+color1  = #f84547
+color9  = #f84547
 
 # Green
-color2  = #84b97c
-color10 = #84b97c
+color2  = #95c76f
+color10 = #95c76f
 
 # Yellow
-color3  = #c3ba63
-color11 = #c3ba63
+color3  = #efa16b
+color11 = #efa16b
 
 # Blue
-color4  = #639ee4
-color12 = #639ee4
+color4  = #8485ce
+color12 = #8485ce
 
 # Purple
-color5  = #b888e2
-color13 = #b888e2
+color5  = #b74989
+color13 = #b74989
 
 # Teal
-color6  = #4bb1a7
-color14 = #4bb1a7
+color6  = #64878f
+color14 = #64878f
 
 # Extra colors
-color16 = #4bb1a7
-color17 = #b888e2
-color18 = #202020
-color19 = #303030
-color20 = #505050
-color21 = #808080
+color16 = #d28e5d
+color17 = #986841
+color18 = #333344
+color19 = #474160
+color20 = #b8b8b8
+color21 = #e8e8e8

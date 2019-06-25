@@ -104,7 +104,7 @@ let g:tern_show_argument_hints          = "on_move"
 let g:tern_map_keys                     = 1
 
 highlight Comment cterm=italic
-colorscheme gruvbox
+colorscheme base16-porple
 
 if filereadable(expand("~/.vim/colorscheme.vim"))
   let base16colorspace=256

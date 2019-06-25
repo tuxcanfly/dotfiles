@@ -2244,17 +2244,23 @@ separator_color = "#8a8986"
 frame_color = "#a7a7a7"
 separator_color = "#a7a7a7"
 
+frame_color = "#c1c1c1"
+separator_color = "#c1c1c1"
+
+frame_color = "#d8d8d8"
+separator_color = "#d8d8d8"
+
 [base16_low]
     msg_urgency = low
-    background = "#202020"
-    foreground = "#5f5a60"
+    background = "#333344"
+    foreground = "#65568a"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#303030"
-    foreground = "#a7a7a7"
+    background = "#474160"
+    foreground = "#d8d8d8"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#dc657d"
-    foreground = "#808080"
+    background = "#f84547"
+    foreground = "#e8e8e8"
