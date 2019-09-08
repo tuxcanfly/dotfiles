@@ -1,1 +1,1 @@
-colorscheme base16-porple
+colorscheme base16-gruvbox-dark-hard

@@ -50,3 +50,4 @@ fonts.dir
 .bin/
 
 *.bac
+.tool-versions

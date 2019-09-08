@@ -31,51 +31,51 @@ color13= #bb88dd
 color14= #4eb4fa
 color15= #d0d0d0
 [colors]
-# Base16 Porple
-# Author: Niek den Breeje (https://github.com/AuditeMarlow)
+# Base16 Gruvbox dark, hard
+# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-foreground          = #d8d8d8
-foreground_bold     = #e8e8e8
-cursor              = #e8e8e8
-cursor_foreground   = #292c36
-background          = rgba(41, 44, 54)
+foreground          = #d5c4a1
+foreground_bold     = #ebdbb2
+cursor              = #ebdbb2
+cursor_foreground   = #1d2021
+background          = rgba(29, 32, 33)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #292c36
-color8  = #65568a
-color7  = #d8d8d8
-color15 = #f8f8f8
+color0  = #1d2021
+color8  = #665c54
+color7  = #d5c4a1
+color15 = #fbf1c7
 
 # Red
-color1  = #f84547
-color9  = #f84547
+color1  = #fb4934
+color9  = #fb4934
 
 # Green
-color2  = #95c76f
-color10 = #95c76f
+color2  = #b8bb26
+color10 = #b8bb26
 
 # Yellow
-color3  = #efa16b
-color11 = #efa16b
+color3  = #fabd2f
+color11 = #fabd2f
 
 # Blue
-color4  = #8485ce
-color12 = #8485ce
+color4  = #83a598
+color12 = #83a598
 
 # Purple
-color5  = #b74989
-color13 = #b74989
+color5  = #d3869b
+color13 = #d3869b
 
 # Teal
-color6  = #64878f
-color14 = #64878f
+color6  = #8ec07c
+color14 = #8ec07c
 
 # Extra colors
-color16 = #d28e5d
-color17 = #986841
-color18 = #333344
-color19 = #474160
-color20 = #b8b8b8
-color21 = #e8e8e8
+color16 = #fe8019
+color17 = #d65d0e
+color18 = #3c3836
+color19 = #504945
+color20 = #bdae93
+color21 = #ebdbb2

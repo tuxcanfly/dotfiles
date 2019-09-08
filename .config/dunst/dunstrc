@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+20"
+    geometry = "300x5-50-50"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 20
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -2250,17 +2250,92 @@ separator_color = "#c1c1c1"
 frame_color = "#d8d8d8"
 separator_color = "#d8d8d8"
 
+frame_color = "#93a1a1"
+separator_color = "#93a1a1"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#f1eff8"
+separator_color = "#f1eff8"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#93a1a1"
+separator_color = "#93a1a1"
+
+frame_color = "#586e75"
+separator_color = "#586e75"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#f1eff8"
+separator_color = "#f1eff8"
+
+frame_color = "#a39e9b"
+separator_color = "#a39e9b"
+
+frame_color = "#cabcb1"
+separator_color = "#cabcb1"
+
+frame_color = "#D0D0D0"
+separator_color = "#D0D0D0"
+
+frame_color = "#101010"
+separator_color = "#101010"
+
+frame_color = "#CDD3DE"
+separator_color = "#CDD3DE"
+
+frame_color = "#d0c8c6"
+separator_color = "#d0c8c6"
+
+frame_color = "#A39A90"
+separator_color = "#A39A90"
+
+frame_color = "#102015"
+separator_color = "#102015"
+
+frame_color = "#d0d0d0"
+separator_color = "#d0d0d0"
+
+frame_color = "#504945"
+separator_color = "#504945"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#d0c8c6"
+separator_color = "#d0c8c6"
+
+frame_color = "#f8f8f2"
+separator_color = "#f8f8f2"
+
+frame_color = "#8b8198"
+separator_color = "#8b8198"
+
+frame_color = "#d8d8d8"
+separator_color = "#d8d8d8"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
 [base16_low]
     msg_urgency = low
-    background = "#333344"
-    foreground = "#65568a"
+    background = "#3c3836"
+    foreground = "#665c54"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#474160"
-    foreground = "#d8d8d8"
+    background = "#504945"
+    foreground = "#d5c4a1"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#f84547"
-    foreground = "#e8e8e8"
+    background = "#fb4934"
+    foreground = "#ebdbb2"

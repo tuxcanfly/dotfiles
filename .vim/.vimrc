@@ -17,7 +17,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-sensible'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'sebdah/vim-delve'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -40,18 +39,18 @@ Plug 'othree/yajs.vim'
 Plug 'idbrii/vim-remarkjs'
 Plug 'jacoborus/tender.vim'
 Plug 'wellle/targets.vim'
-Plug 'junegunn/vim-easy-align'
 Plug 'sodapopcan/vim-twiggy'
+Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ajmwagar/vim-deus'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
@@ -134,6 +133,9 @@ nmap <leader>fc                         :Gread<CR>
 nmap <leader>fw                         :Gwrite<CR>
 nmap <C-s>                              :wa<CR>
 nmap <C-p>                              :FZF<CR>
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " :terminal
 tnoremap <Esc> <C-\><C-n>

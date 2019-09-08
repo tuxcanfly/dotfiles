@@ -1,6 +1,6 @@
 setopt noflowcontrol
  
-ZSH_THEME="robbyrussell"
+ZSH_THEME="half-life"
 plugins=(git golang history tmux archlinux z)
 
 [ ! -f ~/.zgen/zgen.zsh ] && git clone https://github.com/tarjoilija/zgen ~/.zgen

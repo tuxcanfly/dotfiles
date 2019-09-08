@@ -1,4 +1,4 @@
-# set modifier
+#adsa set modifier
 set $super Mod4
 set $alt Mod1
 
@@ -11,14 +11,15 @@ floating_modifier $super
 
 #autostart
 exec --no-startup-id xrdb ~/.Xdefaults
+exec --no-startup-id nmcli connection up TSR2
 exec --no-startup-id xsettingsd &
-exec --no-startup-id setxkbmap -layout us -option caps:escape
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton -b
+exec --no-startup-id dunst
 exec --no-startup-id greenclip daemon
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id redshift
-exec --no-startup-id wally --force
+exec --no-startup-id wally
 exec --no-startup-id hsetroot -fill ~/Pictures/wally.jpg
 exec --no-startup-id xset r rate 500 30
 exec --no-startup-id syncthing
@@ -28,12 +29,12 @@ bindsym $super+Return exec termite
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Inconsolata\-dz for Powerline:size=8'"
-bindsym Control+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Inconsolata\-dz for Powerline 8'
+bindsym Control+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -columns 3 -show combi -sidebar-mode -font 'Inconsolata\-dz for Powerline 8'
 bindsym $alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font 'Inconsolata\-dz for Powerline 8'
 
 # common apps keybinds
-bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
-bindsym $alt+Control+l exec 'i3lock -b -i ~/Pictures/wally.jpg'
+bindsym Print exec scrot "Cheese_%a-%d%b%y_%H.%M.png" -e "viewnior ~/$f"
+bindsym $alt+Control+l exec "i3lock"
 bindsym $super+w exec luakit
 
 #change volume
