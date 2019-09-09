@@ -1,6 +1,6 @@
 setopt noflowcontrol
  
-ZSH_THEME="half-life"
+ZSH_THEME="sunaku"
 plugins=(git golang history tmux archlinux z)
 
 [ ! -f ~/.zgen/zgen.zsh ] && git clone https://github.com/tarjoilija/zgen ~/.zgen
@@ -41,4 +41,4 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
 
-if [ "$TMUX" = "" ]; then tmux new; fi
+if [ "$TMUX" = "" ]; then tmux -2u new; fi

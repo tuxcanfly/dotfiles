@@ -90,10 +90,8 @@ XTerm*color13                 : #dfafdf
 XTerm*color14                 : #afdfdf
 XTerm*color15                 : #eeeeee
 XTerm*colorBD                 : #afafdf
-URxvt*colorIT                 : #80d4aa
+XTerm*colorIT                 : #80d4aa
 XTerm*colorUL                 : #dfdfaf
 XTerm*foreground              : #d0d0d0
 XTerm*background              : #1c1c1c
 XTerm*cursorColor             : #ffaf00
-
-

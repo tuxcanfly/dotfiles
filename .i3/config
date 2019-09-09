@@ -4,14 +4,15 @@ set $alt Mod1
 
 # set font
 
-font pango: Inconsolata\-dz for Powerline 8
+font pango: Noto Mono 8
+
 
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
 
 #autostart
 exec --no-startup-id xrdb ~/.Xdefaults
-exec --no-startup-id nmcli connection up TSR2
+exec --no-startup-id nmcli connection up Tenda
 exec --no-startup-id xsettingsd &
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton -b
@@ -20,17 +21,16 @@ exec --no-startup-id greenclip daemon
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id redshift
 exec --no-startup-id wally
-exec --no-startup-id hsetroot -fill ~/Pictures/wally.jpg
-exec --no-startup-id xset r rate 500 30
+exec --no-startup-id hsetroot -fill ~/Pictures/arch.png
 exec --no-startup-id syncthing
 
 # start a terminal
-bindsym $super+Return exec termite
+bindsym $super+Return exec urxvt
 
 # start dmenu (a program launcher)
-bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Inconsolata\-dz for Powerline:size=8'"
-bindsym Control+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -columns 3 -show combi -sidebar-mode -font 'Inconsolata\-dz for Powerline 8'
-bindsym $alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font 'Inconsolata\-dz for Powerline 8'
+bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Mono:size=8'"
+bindsym Control+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -columns 3 -show combi -sidebar-mode -font 'Noto Mono 8'
+bindsym $alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font 'Noto Mono 8'
 
 # common apps keybinds
 bindsym Print exec scrot "Cheese_%a-%d%b%y_%H.%M.png" -e "viewnior ~/$f"
