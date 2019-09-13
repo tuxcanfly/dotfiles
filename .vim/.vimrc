@@ -46,7 +46,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ajmwagar/vim-deus'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
@@ -117,7 +117,7 @@ nnoremap ; :
 
 map <silent>K                           :tabnext<CR>
 map <silent>J                           :tabprevious<CR>
-map <silent><leader>s                   :Gstatus<CR>
+map <silent><leader>s                   :Git<CR>
 map <silent><leader>d                   :Gdiff<CR>
 map <Leader>T                           :tabnew<CR>
 map <leader>g                           :Ggrep <cword>

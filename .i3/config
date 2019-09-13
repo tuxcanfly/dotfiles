@@ -22,10 +22,11 @@ exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id redshift
 exec --no-startup-id wally
 exec --no-startup-id hsetroot -fill ~/Pictures/arch.png
+exec --no-startup-id base16-manager set woodland
 exec --no-startup-id syncthing
 
 # start a terminal
-bindsym $super+Return exec urxvt
+bindsym $super+Return exec termite
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Mono:size=8'"
