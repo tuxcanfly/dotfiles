@@ -1,3 +1,4 @@
+stty -ixon
 setopt noflowcontrol
  
 ZSH_THEME="sunaku"
