@@ -1,0 +1,8 @@
+{
+    "coc.preferences.hoverTarget": "float",
+    "coc.preferences.enableFloatHighlight": true,
+    "javascript.validate.enable": false,
+    "suggest.triggerAfterInsertEnter": true,
+    "javascript.suggest.enabled": true,
+    "typescript.suggest.enabled": true,
+}
