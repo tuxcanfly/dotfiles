@@ -22,6 +22,7 @@ export PATH=$PATH:$HOME/.linuxbrew/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 export PATH=$PATH:/root/.gem/ruby/2.5.0/bin
 export GPG_TTY=$(tty)
+export NODE_OPTIONS="--experimental-repl-await"
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"

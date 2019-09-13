@@ -47,7 +47,9 @@ fonts.dir
 .local/share/luakit/command-history
 .local/share/luakit/local_storage/
 .local/share/luakit/recovery_session
+.local/share/luakit/indexeddb/
 .bin/
 
 *.bac
 .tool-versions
+*.pid

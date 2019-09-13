@@ -12,7 +12,7 @@ floating_modifier $super
 
 #autostart
 exec --no-startup-id xrdb ~/.Xdefaults
-exec --no-startup-id nmcli connection up Tenda
+exec --no-startup-id nmcli connection up Tenda5G passwd-file /etc/wifi
 exec --no-startup-id xsettingsd &
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton -b

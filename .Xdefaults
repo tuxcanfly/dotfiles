@@ -36,8 +36,8 @@ URxvt.perl-ext-common:
 
 
 !! Fonts
-URxvt.font: xft:Hurmit:size=12
-URxvt*boldFont: xft:Hurmit:size=12
+URxvt.font: xft:monofur for Powerline:size=14
+URxvt*boldFont: xft:monofur for Powerline:size=14
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space
