@@ -118,7 +118,7 @@ nnoremap ; :
 
 map <silent>K                           :tabnext<CR>
 map <silent>J                           :tabprevious<CR>
-map <silent><leader>s                   :Git<CR>
+map <silent><leader>s                   :Gstatus<CR>
 map <silent><leader>d                   :Gdiff<CR>
 map <Leader>T                           :tabnew<CR>
 map <leader>g                           :Ggrep <cword>
