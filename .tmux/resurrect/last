@@ -1,14 +1,31 @@
 pane	0	1	:vim	1	:*	1	:/home/tuxcanfly/Work/bcoin	1	vim	:vim
 pane	0	1	:vim	1	:*	2	:/home/tuxcanfly/Work/bcoin	0	zsh	:
-pane	0	2	:mosh-client	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh tuxcanfly.me -- tmux -2u attach-session -t irssi
-pane	0	3	:ssh	0	:	1	:/home/tuxcanfly	1	ssh	:ssh -t bcoin@173.230.147.47 tmux attach
-pane	0	4	:ssh	0	:	1	:/home/tuxcanfly	1	ssh	:ssh -t bithub.shop tmux attach
-pane	0	5	:ssh	0	:	1	:/home/tuxcanfly	1	ssh	:ssh -t okbit.co.in tmux attach
-pane	0	6	:ssh	0	:-	1	:/home/tuxcanfly	1	ssh	:ssh -t tuxcanfly.me tmux attach
-window	0	1	1	:*	e557,319x76,0,0{160x76,0,0,0,158x76,161,0,1}
-window	0	2	0	:	cd7f,319x76,0,0,2
-window	0	3	0	:	cd80,319x76,0,0,3
-window	0	4	0	:	cd81,319x76,0,0,4
-window	0	5	0	:	cd82,319x76,0,0,5
-window	0	6	0	:-	cd83,319x76,0,0,6
-state	0	
+pane	0	2	:vim	0	:	1	:/home/tuxcanfly/Work/hsd	1	vim	:vim
+pane	0	2	:vim	0	:	2	:/home/tuxcanfly/Work/hsd	0	zsh	:
+pane	0	3	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# tuxcanfly.me -- tmux -2u attach-session -t status | 146.185.169.116 60001
+pane	0	4	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# okbit.co.in -- tmux -2u attach-session -t status | 206.189.83.135 60001
+pane	0	5	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# bcoin@139.59.42.94 -- tmux -2u attach-session -t status | 139.59.42.94 60001
+pane	0	6	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# bithub.shop -- tmux -2u attach-session -t status | 78.46.17.17 60001
+pane	0	7	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# okbit.co.in -- tmux -2u attach-session -t bcoin | 206.189.83.135 60002
+pane	0	8	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# bithub.shop -- tmux -2u attach-session -t bcoin | 78.46.17.17 60002
+pane	0	9	:ssh	0	:	1	:/home/tuxcanfly	1	mosh-client	:mosh-client -# tuxcanfly.me -- tmux -2u attach-session -t irssi | 146.185.169.116 60002
+pane	0	10	:slack	0	:-	1	:/home/tuxcanfly	1	slack	:slack
+pane	2	1	:vim	1	:*	1	:/home/tuxcanfly	1	zsh	:
+pane	4	1	:vim	1	:*	1	:/home/tuxcanfly	1	zsh	:
+pane	6	1	:vim	1	:*	1	:/home/tuxcanfly	1	zsh	:
+pane	8	1	:vim	1	:*	1	:/home/tuxcanfly	1	zsh	:
+window	0	1	1	:*	104a,191x42,0,0{95x42,0,0,42,95x42,96,0,43}
+window	0	2	0	:	104f,191x42,0,0{95x42,0,0,44,95x42,96,0,45}
+window	0	3	0	:	dad6,191x42,0,0,46
+window	0	4	0	:	dad7,191x42,0,0,47
+window	0	5	0	:	dad8,191x42,0,0,48
+window	0	6	0	:	dad9,191x42,0,0,49
+window	0	7	0	:	5ad1,191x42,0,0,50
+window	0	8	0	:	5ad2,191x42,0,0,51
+window	0	9	0	:	5ad3,191x42,0,0,52
+window	0	10	0	:-	5ad4,191x42,0,0,53
+window	2	1	1	:*	6551,159x37,0,0,12
+window	4	1	1	:*	60b3,189x44,0,0,14
+window	6	1	1	:*	dad2,191x42,0,0,23
+window	8	1	1	:*	dad1,191x42,0,0,41
+state	0	8

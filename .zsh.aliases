@@ -1,10 +1,13 @@
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias m=./manage.py
 alias flix="pirate-get -C 'peerflix %s --mpv'"
-alias tux-session="mosh tuxcanfly.me -- tmux -2u attach-session -t"
 alias music='tmux new-session "tmux source-file ~/.ncmpcpp/tmux_session"' # Tmux session with ncmpcpp and cover art
 alias rm="rm -i"
 
 hexcmp () {
     cmp -l $1 $2 | gawk '{printf "%08X %02X %02X\n", $1, strtonum(0$2), strtonum(0$3)}' | vim -
+}
+
+tux-session() {
+    mosh $1 -- tmux -2u attach-session -t $2
 }

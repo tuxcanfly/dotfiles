@@ -1,16 +1,16 @@
 [user]
-	name = "Javed Khan"
-	email = "<tuxcanfly@gmail.com>"
-	signingkey = 7E31745B904584E6
+    name = "Javed Khan"
+    email = "<tuxcanfly@gmail.com>"
+    signingkey = 7E31745B904584E6
 [core]
-	excludesfile = ~/.gitignore
-	autocrlf = input
-	safecrlf = false
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    safecrlf = false
     editor = vim
 [color]
-	ui = auto
+    ui = auto
 [push]
-	default = tracking
+    default = tracking
 [alias]
     a = add
     b = branch
@@ -33,13 +33,15 @@
     up = pull --all --rebase --autostash
 
 [url "git@github.com"]
-	insteadOf = gh
+    insteadOf = gh
 [url "git@bitbucket.com:"]
-	insteadOf = bb
+    insteadOf = bb
 [merge]
     tool = nvr
 
 [mergetool "nvr"]
     cmd = "nvr -cc tabnew -o \"$BASE\" \"$REMOTE\" -O \"$LOCAL\" \"$MERGED\""
 [commit]
-	gpgsign = true
+    gpgsign = true
+[gpg]
+    program = /usr/bin/gpg2

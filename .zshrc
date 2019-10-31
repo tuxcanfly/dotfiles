@@ -1,7 +1,7 @@
 stty -ixon
 setopt noflowcontrol
  
-ZSH_THEME="sunaku"
+ZSH_THEME="flazz"
 plugins=(git golang history tmux archlinux z)
 
 [ ! -f ~/.zgen/zgen.zsh ] && git clone https://github.com/tarjoilija/zgen ~/.zgen
@@ -13,6 +13,17 @@ source ~/.asdf/asdf.sh
 source ~/.asdf/completions/asdf.bash
 
 [ -f ~/.zsh.aliases ] && . ~/.zsh.aliases
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+	[ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+	eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+if [[ $TERM =~ konsole.* ]]; then
+    export FZF_DEFAULT_OPTS='--color fg+:5,hl+:6'
+fi
+
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh
 export PATH=$HOME/bin:$PATH

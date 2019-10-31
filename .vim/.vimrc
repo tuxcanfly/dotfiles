@@ -88,6 +88,7 @@ set completeopt     =noinsert,menuone,noselect
 set background      =dark
 set guicursor       =
 set noshowmode
+set termguicolors
 
 let g:closetag_default_xml              = 1
 let g:surround_{char2nr("r")}           ="_(u\r)"
@@ -99,10 +100,10 @@ let g:tern_show_argument_hints          = "on_move"
 let g:tern_map_keys                     = 1
 
 highlight Comment cterm=italic
-colorscheme base16-porple
+
+colorscheme base16-default-dark
 
 if filereadable(expand("~/.vim/colorscheme.vim"))
-  let base16colorspace=256
   source ~/.vim/colorscheme.vim
 endif
 
