@@ -72,21 +72,21 @@ URxvt.url-select.underline : true
 ! b3 = 70%
 ! 80 = 50%
 
-rofi.line-margin: 2
-rofi.fullscreen: false
-rofi.eh: 2
-rofi.separator-style: solid
-rofi.hide-scrollbar: true
-rofi.lines: 7
-rofi.width: 50
-rofi.padding: 50
-rofi.bw: 0
-rofi.auto-select: false
-rofi.fuzzy: true
-rofi.scroll-method: 1
-rofi.window-format: {t}
+!rofi.line-margin: 2
+!rofi.fullscreen: false
+!rofi.eh: 2
+!rofi.separator-style: solid
+!rofi.hide-scrollbar: true
+!rofi.lines: 7
+!rofi.width: 50
+!rofi.padding: 50
+!rofi.bw: 0
+!rofi.auto-select: false
+!rofi.fuzzy: true
+!rofi.scroll-method: 1
+!rofi.window-format: {t}
 
-rofi.color-window: argb: EE000000, argb: EE000000, argb: EE000000
-rofi.color-normal: argb: 00000000, #DEDEDE, argb: 00000000, #DEDEDE
+!rofi.color-window: argb: EE000000, argb: EE000000, argb: EE000000
+!rofi.color-normal: argb: 00000000, #DEDEDE, argb: 00000000, #DEDEDE
 
-#include ".xcolors/@active"
+#include ".Xresources"

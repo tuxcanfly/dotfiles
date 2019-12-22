@@ -1,103 +1,267 @@
-[bar/bar]
+; ------------ Get color from .Xresources ------------
+[colors]
+black   = ${xrdb:color0}
+grey    = ${xrdb:color8}
+white   = ${xrdb:color7}
 
-font-0 = "Inconsolata\-dz for Powerline:pixelsize=10;2.25"
+red     = ${xrdb:color1}
+blue    = ${xrdb:color4}
+magenta = ${xrdb:color5}
+cyan    = ${xrdb:color6}
+green   = ${xrdb:color2}
+yellow  = ${xrdb:color3}
 
-monitor = "eDP-1"
+dark1   = #262c37
+dark2   = #1f2533
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+background = ${xrdb:color0}
+foreground = ${xrdb:foreground}
 
-fixed-center = true
+; ------------------- Custom variables ----------------
+[user]
+; module padding are set individually instead of using global variable
+padding = 1
 
-width = 100%
-height = 36
+; ------------------- Configuration -------------------
+[bar/default]
+dpi                 = 116
+height              = 30
+line-size           = 2
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
 
-background = #1d1f21
-foreground = #707880
+modules-left        = wm xworkspaces
+modules-center      = xwindow
+modules-right       = mpd wired-network volume date search
 
-radius = 0.0
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+font-0              = Cascadia Code:size=8;2
+font-1              = SF Pro Text:size=7;2
+font-2              = Font Awesome 5 Brands:size=6;2
+font-3              = Font Awesome 5 Free Solid:size=6;2
+font-4              = Siji:pixelsize=10;1
+font-5              = WenQuanYi Bitmap Song:size=12;2
 
-# line-size = 1
-# line-color = #f00
+; -------------------- modules -----------------------
+[module/xwindow]
+type                     = internal/xwindow
+label                    = %title:0:65:...%
 
-# border-size = 2
-# border-color = #00ff00
-padding-left = 1
-padding-right = 1
-module-margin = 1
 
-modules-left = i3
-modules-center = date
-modules-right = system-uptime-pretty network-traffic network-networkmanager ticker-btcusd
+[module/xworkspaces]
+type           = internal/xworkspaces
+pin-workspaces = true
+enable-click   = true
+enable-scroll  = false
 
-[module/i3]
-strip-wsnumbers = true
-type = internal/i3
-format = <label-state> <label-mode>
+format         = <label-state>
+format-padding = ${user.padding}
+format-background = ${colors.dark1}
 
-label-focused = %index%
-label-focused-foreground = #cc6666
-label-focused-background = #1d1f21
-label-focused-underline = #fba922
-label-focused-padding = 1
+; %index%, %name% or %icon%
+label-active              = %index%
+label-active-foreground   = ${colors.foreground}
+label-active-padding      = 1
+label-active-underline    = ${colors.grey}
 
-label-unfocused = %index%
-label-unfocused-padding = 1
+label-occupied            = %index%
+label-occupied-foreground = ${colors.red}
+label-occupied-padding    = 1
 
-label-visible = %index%
-label-visible-underline = #555555
-label-visible-padding = 1
+label-urgent              = %index%
+label-urgent-foreground   = ${colors.red}
+label-urgent-padding      = 1
 
-label-urgent = %index%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-padding = 1
+label-empty               = %index%
+label-empty-foreground    = ${colors.grey}
+label-empty-padding       = 1
+
+icon-0 = 0;
+icon-1 = 1;
+icon-2 = 2;
+icon-3 = 3;
+icon-4 = 4;
+icon-5 = 5;
+icon-6 = 6;
+icon-7 = 7;
+icon-8 = 8;
+
 
 [module/date]
-type = internal/date
-interval = 1.0
-date = %A, %d %B %I:%M %p
-
-# [module/github]
-# type = internal/github
-
-[module/kdeconnect]
-type = custom/script
-exec = "~/.polybar/polybar-kdeconnect/polybar-kdeconnect.sh -d"
-tail = true
+type                = internal/date
+interval            = 1
+format              = %{A1:calendar:} <label>%{A}
+format-padding      = ${user.padding}
+label               = %time%
+label-padding-right = 1
+time                = "%a %H:%M"
+format-foreground   = ${colors.red}
+label-foreground    = ${colors.foreground}
 
 
-[module/system-uptime-pretty]
-type = custom/script
-exec = ~/.polybar/polybar-scripts/system-uptime-pretty/system-uptime-pretty.sh
-interval = 30
+[module/volume]
+type                     = internal/pulseaudio
+format-volume            =  <label-volume>
+format-volume-padding    = ${user.padding}
+format-muted             =  <label-muted>
+format-muted-padding     = ${user.padding}
+label-muted              = Muted
+format-volume-foreground = ${colors.yellow}
+format-volume-background = ${colors.background}
+label-volume-foreground  = ${colors.foreground}
+format-muted-foreground  = ${colors.yellow}
+format-muted-background  = ${colors.background}
+label-muted-foreground   = ${colors.foreground}
 
-[module/network-traffic]
-type = custom/script
-exec = ~/.polybar/polybar-scripts/network-traffic/network-traffic.sh
-tail = true
 
-[module/network-networkmanager]
-type = custom/script
-exec = ~/.polybar/polybar-scripts/network-networkmanager/network-networkmanager.sh
-tail = true
+[module/battery]
+type = internal/battery
+full-at = 97
 
-[module/ticker-btcusd]
-type = custom/script
-exec = ~/.polybar/polybar-scripts/ticker-btceur/ticker-btceur.sh
-interval = 600
+label-charging    = %percentage%%
+label-discharging = %percentage%%
+label-full        = %percentage%%
 
-# token = ${file:/path/to/file/containing/github/access.token}
+format-charging            = <animation-charging>  <label-charging>
+format-charging-padding    = ${user.padding}
+format-discharging         = <ramp-capacity>  <label-discharging>
+format-discharging-padding = ${user.padding}
+format-full                =  <label-full>
+format-full-padding        = ${user.padding}
 
-# ; Accessing an access token stored in an environment variable
-# token = ${env:GITHUB_ACCESS_TOKEN}
+animation-charging-foreground = ${colors.green}
+ramp-capacity-foreground      = ${colors.green}
+label-full-foreground         = ${colors.foreground}
+format-full-foreground        = ${colors.green}
 
-# ; Whether empty notifications should be displayed or not
-# empty-notifications = false
+ramp-capacity-0            = 
+ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-1            = 
+ramp-capacity-1-foreground = ${colors.yellow}
+ramp-capacity-2            = 
+ramp-capacity-3            = 
+ramp-capacity-4            = 
 
-[module/title]
-type = internal/xwindow
-# format-background = #f00
-format-foreground = #f0c674
-format-padding = 1
-label-maxlen = 50
+animation-charging-0       = 
+
+
+[module/wireless-network]
+type                           = internal/network
+accumulate-stats               = true
+interface                      = wlp2s0
+interval                       = 5.0
+format-connected               = <ramp-signal> <label-connected>
+format-connected-padding       = ${user.padding}
+format-connected-foreground    = ${colors.blue}
+format-disconnected            =  <label-disconnected>
+format-disconnected-padding    = ${user.padding}
+format-disconnected-foreground = ${colors.blue}
+label-connected                = %essid%
+label-connected-foreground     = ${colors.foreground}
+label-disconnected             = offline
+label-disconnected-foreground  = ${colors.foreground}
+ramp-signal-0                  = 
+ramp-signal-1                  = 
+ramp-signal-2                  = 
+ramp-signal-3                  = 
+ramp-signal-4                  = 
+
+
+[module/wired-network]
+type                           = internal/network
+accumulate-stats               = true
+interface                      = enp34s0
+interval                       = 5.0
+format-connected               =  <label-connected>
+format-connected-padding       = ${user.padding}
+format-connected-foreground    = ${colors.blue}
+format-disconnected            =  <label-disconnected>
+format-disconnected-padding    = ${user.padding}
+format-disconnected-foreground = ${colors.blue}
+label-connected                = %ifname%
+label-connected-foreground     = ${colors.foreground}
+label-disconnected             = offline
+label-disconnected-foreground  = ${colors.foreground}
+
+
+[module/vpn]
+type                          = internal/network
+interface                     = tun0
+interval                      = 5.0
+accumulate-stats              = true
+format-connected              = VPN: <label-connected>
+format-connected-foreground   = ${colors.blue}
+format-disconnected           = <label-disconnected>
+label-connected               = Connected
+label-connected-foreground    = ${colors.foreground}
+label-disconnected            = (None)
+label-disconnected-foreground = ${colors.foreground}
+
+
+[module/mpd]
+type                     = internal/mpd
+host                     = 127.0.0.1
+port                     = 6600
+interval                 = 2
+format-online            =  <label-song>
+format-online-padding    = ${user.padding}
+format-online-foreground = ${colors.magenta}
+label-song               = %artist% - %title%
+label-offline            = mpd is offline
+label-song-foreground    = ${colors.foreground}
+label-offline-foreground = ${colors.foreground}
+icon-play                = 
+icon-pause               = 
+icon-prev                = 
+icon-next                = 
+icon-play-foreground     = ${colors.blue}
+icon-pause-foreground    = ${colors.blue}
+icon-prev-foreground     = ${colors.blue}
+icon-next-foreground     = ${colors.blue}
+
+
+[module/search]
+type               = custom/text
+content            = 
+content-padding    = ${user.padding}
+content-background = ${colors.dark1}
+click-left         = rofi -show drun
+
+
+[module/power]
+type               = custom/text
+content            = 
+content-padding    = ${user.padding}
+content-background = ${colors.dark2}
+click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+
+[module/wm]
+type               = custom/script
+exec               = echo " "`xprop -root _NET_WM_NAME | cut -d \" -f 2`
+interval           = 2147483647
+format-prefix      = 
+format-background  = ${colors.dark2}
+format-padding     = 2
+click-left         = select_wm
+
+
+[module/weather]
+type               = custom/script
+exec               = ~/.local/bin/polybar/weather.py
+exec-if            = check_connection.sh
+interval           = 43200
+format-prefix      = " "
+format-padding     = ${user.padding}
+format-prefix-foreground = ${colors.cyan}
+
+
+[module/bus]
+type               = custom/script
+exec               = bus.sh
+exec-if            = check_connection.sh
+interval           = 180
+format-prefix      = " "

@@ -26,16 +26,18 @@ set $Alt = Mod1
 ; Colors
 
 colors {
-    background #2F2F2F
-    statusline #eeeeee
-    separator #666666
+        background #2F2F2F
+        statusline #eeeeee
+        separator #666666
+        #                     border  backgr. text
+        focused_workspace     #a9a9a9 #222222 #a9a9a9
+        active_workspace      #a9a9a9 #222222 #a9a9a9
+        inactive_workspace    #a9a9a9 #5f676a #a9a9a9
+        urgent_workspace      #4A4A4A #4A4A4A #a9a9a9
+        }
 
-    #                     border  backgr. text
-    focused_workspace     #a9a9a9 #222222 #a9a9a9
-    active_workspace      #a9a9a9 #222222 #a9a9a9
-    inactive_workspace    #a9a9a9 #5f676a #a9a9a9
-    urgent_workspace      #4A4A4A #4A4A4A #a9a9a9
-}
+    }
+    
 
 # DarkGrey background with white text - not focus grey background - black text
 # Windows decoration colors
