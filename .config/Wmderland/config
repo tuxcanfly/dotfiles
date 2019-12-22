@@ -1,0 +1,207 @@
+; Wmderland configuration file
+; To describe a window, run `xprop` and click on the target window, and
+; you will get something like this as output:
+;
+; WM_CLASS(STRING) = (2)"urxvt", (1)"URxvt"
+; _NET_WM_NAME(UTF8_STRING) = (3)"urxvt"
+;
+; To make urxvt floating by default, write in this order:
+; (1) res_class (2) res_name (3) _NET_WM_NAME. (1) is always required,
+; (2) and (3) are optional.
+; example: float URxvt,urxvt,urxvt true
+
+
+; [Global Variables]
+; `set <Key> = <Value>` to set a builtin varaible
+; `set $<Variable> = <Value>` to define your own variable
+; -----------------------------------------------------------------------
+set gap_width = 12
+set border_width = 3
+set min_window_width = 100
+set min_window_height = 100
+set $Mod = Mod4
+set $Alt = Mod1
+
+
+; Colors
+
+colors {
+    background #2F2F2F
+    statusline #eeeeee
+    separator #666666
+
+    #                     border  backgr. text
+    focused_workspace     #a9a9a9 #222222 #a9a9a9
+    active_workspace      #a9a9a9 #222222 #a9a9a9
+    inactive_workspace    #a9a9a9 #5f676a #a9a9a9
+    urgent_workspace      #4A4A4A #4A4A4A #a9a9a9
+}
+
+# DarkGrey background with white text - not focus grey background - black text
+# Windows decoration colors
+# class                 border  backgr. text    indicator
+client.placeholder      #242424 #242424 #242424
+client.background       #242424 #242424 #242424
+client.focused          #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
+client.unfocused        #222222 #222222 #aaaaaa #222222
+client.focused_inactive #222222 #222222 #a9a9a9 #222222
+client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
+
+set focused_color = 4a4a4a
+set unfocused_color = ff32455c
+
+
+
+# set font
+
+font pango: Cascadia Code 10
+
+# Use Mouse+$Mod to drag floating windows to their wanted position
+floating_modifier $Mod
+
+
+; [Spawning Rules]
+; Assign an application to a specific workspace
+; -----------------------------------------------------------------------
+; assign URxvt 1
+; assign jetbrains-idea 2
+; assign Firefox 3
+; assign Google-chrome 3
+; assign dolphin 4
+; assign ark 4
+; assign Et 5
+; assign Wps 5
+; assign Wpp 5
+; assign Spotify 6
+; assign vlc 6
+; assign Allegro 7
+; assign Gimp-2.10 7
+; assign tiled 7
+; assign Wine,steam.exe 8
+; assign Steam 8
+; assign PCSX2 8
+; assign PPSSPPQt 8
+; assign Minecraft Launcher 8
+; assign antimicro 9
+; assign VirtualBox Manager 9
+; assign Transmission 9
+
+
+; [Floating Rules]
+; Applications that should be floating by default
+; -----------------------------------------------------------------------
+floating systemsettings true
+floating SimpleScreenRecorder true
+floating Sxiv true
+floating feh true
+floating mpv true
+floating Peek true
+floating Gcolor2 true
+floating Steam true
+floating PCSX2 true
+floating Wine true
+floating Wine,steam.exe true
+floating Wine,tesv.exe true
+floating VirtualBox Machine true
+floating Vigilante true
+floating xfreerdp true
+
+
+; [Fullscreen Rules]
+; Applications that should be fullscreen by default
+; -----------------------------------------------------------------------
+fullscreen Wine,maplelegendswindowed.exe true
+fullscreen Wine,tesv.exe true
+
+
+; [Prohibit Rules]
+; Applications that should be prohibited from being launched
+; -----------------------------------------------------------------------
+prohibit plasmashell,plasmashell,Desktop — Plasma true
+prohibit Wine,Wine System Tray true
+
+
+; [Keybind]
+; `bindsym <Modifier>+<Key> action1; action2; action3; ...` where
+; an action can be either a built-in action or a shell command to execute
+; -----------------------------------------------------------------------
+bindsym $Mod+1 goto_workspace 1
+bindsym $Mod+2 goto_workspace 2
+bindsym $Mod+3 goto_workspace 3
+bindsym $Mod+4 goto_workspace 4
+bindsym $Mod+5 goto_workspace 5
+bindsym $Mod+6 goto_workspace 6
+bindsym $Mod+7 goto_workspace 7
+bindsym $Mod+8 goto_workspace 8
+bindsym $Mod+9 goto_workspace 9
+
+bindsym $Mod+Shift+j workspace -1
+bindsym $Mod+Shift+k workspace +1
+
+bindsym $Mod+Shift+1 move_window_to_workspace 1
+bindsym $Mod+Shift+2 move_window_to_workspace 2
+bindsym $Mod+Shift+3 move_window_to_workspace 3
+bindsym $Mod+Shift+4 move_window_to_workspace 4
+bindsym $Mod+Shift+5 move_window_to_workspace 5
+bindsym $Mod+Shift+6 move_window_to_workspace 6
+bindsym $Mod+Shift+7 move_window_to_workspace 7
+bindsym $Mod+Shift+8 move_window_to_workspace 8
+bindsym $Mod+Shift+9 move_window_to_workspace 9
+
+bindsym $Mod+h navigate_left
+bindsym $Mod+l navigate_right
+bindsym $Mod+j navigate_down
+bindsym $Mod+k navigate_up
+bindsym $Mod+g tile_h
+bindsym $Mod+v tile_v
+bindsym $Mod+Shift+space toggle_floating
+bindsym $Mod+f toggle_fullscreen
+bindsym $Mod+q kill
+bindsym $Mod+Shift+q exit
+bindsym $Mod+Shift+r reload
+
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86KbdBrightnessUp exec kbdlight up 10
+bindsym XF86KbdBrightnessDown exec kbdlight down 10
+bindsym XF86LaunchA exec rofi -show window
+bindsym XF86LaunchB exec rofi -show drun
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
+bindsym XF86PowerOff exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+; bindsym Control+Shift+3 exec scrotutl -f
+; bindsym Control+Shift+4 exec scrotutl -s
+; bindsym Control+Shift+space+4 exec
+
+bindsym $Mod+d exec rofi -show drun
+bindsym $Mod+Return exec termite
+
+bindsym $Mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Mono:size=8'"
+bindsym Control+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -columns 3 -show combi -sidebar-mode -font 'Noto Mono 8'
+bindsym $Alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font 'Noto Mono 8'
+
+bindsym $Alt+Control+l exec "i3lock"
+bindsym $Mod+w exec luakit
+
+; [Autostart]
+; Applications to execute when WM starts up (DON'T append '&' at the end)
+; -----------------------------------------------------------------------
+exec setxkbmap -layout us -option caps:escape
+exec xrdb ~/.Xdefaults
+exec xsettingsd
+exec compton -b
+exec dunst
+exec greenclip daemon
+exec kdeconnect-indicator
+exec wally -plugin reddit
+exec hsetroot -fill ~/Pictures/wally.jpg
+exec syncthing
+exec mopidy
+exec autocutsel -fork
+exec autocutsel -selection PRIMARY -fork
+exec_on_reload ~/.polybar/launch.sh
