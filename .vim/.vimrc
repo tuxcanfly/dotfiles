@@ -52,6 +52,7 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Shougo/denite.nvim'
 Plug 'tomlion/vim-solidity'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 syntax on
@@ -268,5 +269,8 @@ let g:ale_sign_warning = '⚠'
 
 let g:delve_new_command	 = 'new'
 source ~/.vim/.lightlinerc
+
+let g:slime_target = "tmux"
+let g:slime_target = "neovim"
 
 source ~/.vim/coc.vim
