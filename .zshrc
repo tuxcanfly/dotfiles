@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 stty -ixon
 setopt noflowcontrol
  
@@ -24,15 +31,19 @@ if [[ $TERM =~ konsole.* ]]; then
     export FZF_DEFAULT_OPTS='--color fg+:5,hl+:6'
 fi
 
+export TERM=xterm-256color
 
 export ZSH=~/.zgen/robbyrussell/oh-my-zsh-master/oh-my-zsh.sh
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.linuxbrew/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 export PATH=$PATH:/root/.gem/ruby/2.5.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
+export PATH=$PATH:/root/.gem/ruby/2.5.0/bin
+export PATH=$PATH:/snap/bin
 export GPG_TTY=$(tty)
 export NODE_OPTIONS="--experimental-repl-await"
 
@@ -56,3 +67,10 @@ fi
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
 
 if [ "$TMUX" = "" ]; then tmux -2u new; fi
+
+# set PATH for cuda 10.1 installation
+if [ -d "/usr/local/cuda-10.2/bin/" ]; then
+    export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+export PATH="/home/tuxcanfly/Work/git-fuzzy/bin:$PATH"
