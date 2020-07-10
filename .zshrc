@@ -49,9 +49,6 @@ export NODE_OPTIONS="--experimental-repl-await"
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 if ! zgen saved; then
     zgen oh-my-zsh
@@ -74,3 +71,4 @@ if [ -d "/usr/local/cuda-10.2/bin/" ]; then
     export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
 export PATH="/home/tuxcanfly/Work/git-fuzzy/bin:$PATH"
+export LANG=en_US.utf8

@@ -47,13 +47,12 @@ fonts.dir
 .tmux/resurrect
 .tmux/plugins
 
-.local/share/luakit/command-history
-.local/share/luakit/local_storage/
-.local/share/luakit/recovery_session
-.local/share/luakit/indexeddb/
-.local/share/luakit/session
+.local/share/nvim/
+.local/share/luakit
+.local/share/base16-manager/
 .bin/
 
 *.bac
 .tool-versions
 *.pid
+
