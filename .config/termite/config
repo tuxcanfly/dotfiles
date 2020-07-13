@@ -18,8 +18,6 @@ color4  = #88a4d3
 color13 = #bb90e2
 
 [colors]
-# Base16 Woodland
-# Author: Jay Cornwall (https://jcornwall.com)
 
 foreground          = #cabcb1
 foreground_bold     = #d7c8bc
@@ -66,3 +64,4 @@ color18 = #302b25
 color19 = #48413a
 color20 = #b4a490
 color21 = #d7c8bc
+

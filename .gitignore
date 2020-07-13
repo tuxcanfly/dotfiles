@@ -47,9 +47,7 @@ fonts.dir
 .tmux/resurrect
 .tmux/plugins
 
-.local/share/nvim/
-.local/share/luakit
-.local/share/base16-manager/
+.local/share/
 .bin/
 
 *.bac

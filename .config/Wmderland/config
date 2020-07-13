@@ -192,11 +192,11 @@ bindsym XF86PowerOff exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerIn
 ; bindsym Control+Shift+space+4 exec
 
 bindsym $Mod+d exec rofi -show drun
-bindsym $Mod+Return exec termite
+bindsym $Mod+Return exec st
 
 bindsym $Mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Mono:size=16'"
-bindsym Control+space exec rofi -lines 12 -padding 18 -location 0 -columns 3 -show combi -sidebar-mode -font 'Noto Mono 16'
-bindsym $Alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -font 'Noto Mono 16'
+bindsym Control+space exec rofi -lines 12 -padding 18 -location 0 -columns 3 -show combi -sidebar-mode
+bindsym $Alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 bindsym $Alt+Control+l exec "i3lock"
 bindsym $Mod+w exec "brave-browser"

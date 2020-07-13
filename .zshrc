@@ -43,6 +43,7 @@ export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 export PATH=$PATH:/root/.gem/ruby/2.5.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 export PATH=$PATH:/root/.gem/ruby/2.5.0/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/snap/bin
 export GPG_TTY=$(tty)
 export NODE_OPTIONS="--experimental-repl-await"
