@@ -15,13 +15,12 @@
 ; `set <Key> = <Value>` to set a builtin varaible
 ; `set $<Variable> = <Value>` to define your own variable
 ; -----------------------------------------------------------------------
-set gap_width = 12
-set border_width = 3
+set gap_width = 16
+set border_width = 10
 set min_window_width = 100
 set min_window_height = 100
 set $Mod = Mod4
 set $Alt = Mod1
-
 
 ; Colors
 
@@ -38,7 +37,6 @@ colors {
 
     }
     
-
 # DarkGrey background with white text - not focus grey background - black text
 # Windows decoration colors
 # class                 border  backgr. text    indicator
@@ -52,15 +50,12 @@ client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 set focused_color = 4a4a4a
 set unfocused_color = ff32455c
 
-
-
 # set font
 
 font pango: Cascadia Code 16
 
 # Use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
-
 
 ; [Spawning Rules]
 ; Assign an application to a specific workspace
@@ -92,46 +87,45 @@ floating_modifier $Mod
 ; [Floating Rules]
 ; Applications that should be floating by default
 ; -----------------------------------------------------------------------
-floating systemsettings true
-floating SimpleScreenRecorder true
-floating Sxiv true
-floating feh true
-floating mpv true
-floating Peek true
-floating Gcolor2 true
-floating Steam true
-floating PCSX2 true
-floating Wine true
-floating Wine,steam.exe true
-floating Wine,tesv.exe true
-floating VirtualBox Machine true
-floating Vigilante true
-floating xfreerdp true
-
+; floating systemsettings true
+; floating SimpleScreenRecorder true
+; floating Sxiv true
+; floating feh true
+; floating mpv true
+; floating Peek true
+; floating Gcolor2 true
+; floating Steam true
+; floating PCSX2 true
+; floating Wine true
+; floating Wine,steam.exe true
+; floating Wine,tesv.exe true
+; floating VirtualBox Machine true
+; floating Vigilante true
+; floating xfreerdp true
 
 ; [Fullscreen Rules]
 ; Applications that should be fullscreen by default
 ; -----------------------------------------------------------------------
-fullscreen Wine,maplelegendswindowed.exe true
-fullscreen Wine,tesv.exe true
+; fullscreen Wine,maplelegendswindowed.exe true
+; fullscreen Wine,tesv.exe true
 
 
 ; [Prohibit Rules]
 ; Applications that should be prohibited from being launched
 ; -----------------------------------------------------------------------
-prohibit plasmashell,plasmashell,Desktop — Plasma true
-prohibit Wine,Wine System Tray true
+; prohibit plasmashell,plasmashell,Desktop — Plasma true
+; prohibit Wine,Wine System Tray true
 
 ; [KDE]
 ; Don’t treat Plasma pop-ups as full-sized windows
-for_window [class="plasmashell"] floating enable
+; for_window [class="plasmashell"] floating enable
 
 ; Don’t spawn an empty window for the Plasma Desktop
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
+; for_window [title="Desktop — Plasma"] kill, floating enable, border none
 
 ; Don’t let notifications and non-interactive pop-up windows steal focus
-no_focus [class="plasmashell" window_type="notification"]
-no_focus [class="plasmashell" window_type="on_screen_display"]
+; no_focus [class="plasmashell" window_type="notification"]
+; no_focus [class="plasmashell" window_type="on_screen_display"]
 
 
 ; [Keybind]
@@ -194,12 +188,12 @@ bindsym XF86PowerOff exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerIn
 bindsym $Mod+d exec rofi -show drun
 bindsym $Mod+Return exec st
 
-bindsym $Mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Mono:size=16'"
+; bindsym $Mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Cascadia Code:size=16'"
 bindsym Control+space exec rofi -lines 12 -padding 18 -location 0 -columns 3 -show combi -sidebar-mode
 bindsym $Alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 bindsym $Alt+Control+l exec "i3lock"
-bindsym $Mod+w exec "brave-browser"
+bindsym $Mod+w exec "brave"
 
 ; [Autostart]
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
@@ -218,4 +212,3 @@ exec syncthing
 exec mopidy
 exec autocutsel -fork
 exec autocutsel -selection PRIMARY -fork
-exec_on_reload ~/.polybar/launch.sh

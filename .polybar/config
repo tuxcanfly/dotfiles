@@ -24,8 +24,8 @@ padding = 1
 
 ; ------------------- Configuration -------------------
 [bar/default]
-dpi                 = 116
-height              = 30
+dpi                 = 192
+height              = 32
 line-size           = 2
 padding-left        = 0
 padding-right       = 0
@@ -34,7 +34,7 @@ module-margin-right = 0
 
 modules-left        = wm xworkspaces
 modules-center      = xwindow
-modules-right       = mpd wired-network volume date search
+modules-right       = kdeconnect ticker-crypto wireless-network volume battery date
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -62,20 +62,20 @@ format-padding = ${user.padding}
 format-background = ${colors.dark1}
 
 ; %index%, %name% or %icon%
-label-active              = %index%
+label-active              = %icon%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = 1
 label-active-underline    = ${colors.grey}
 
-label-occupied            = %index%
+label-occupied            = %icon%
 label-occupied-foreground = ${colors.red}
 label-occupied-padding    = 1
 
-label-urgent              = %index%
+label-urgent              = %icon%
 label-urgent-foreground   = ${colors.red}
 label-urgent-padding      = 1
 
-label-empty               = %index%
+label-empty               = %icon%
 label-empty-foreground    = ${colors.grey}
 label-empty-padding       = 1
 
@@ -151,7 +151,7 @@ animation-charging-0       = 
 [module/wireless-network]
 type                           = internal/network
 accumulate-stats               = true
-interface                      = wlp2s0
+interface                      = wlp58s0 
 interval                       = 5.0
 format-connected               = <ramp-signal> <label-connected>
 format-connected-padding       = ${user.padding}
@@ -170,75 +170,6 @@ ramp-signal-3                  = 
 ramp-signal-4                  = 
 
 
-[module/wired-network]
-type                           = internal/network
-accumulate-stats               = true
-interface                      = enp34s0
-interval                       = 5.0
-format-connected               =  <label-connected>
-format-connected-padding       = ${user.padding}
-format-connected-foreground    = ${colors.blue}
-format-disconnected            =  <label-disconnected>
-format-disconnected-padding    = ${user.padding}
-format-disconnected-foreground = ${colors.blue}
-label-connected                = %ifname%
-label-connected-foreground     = ${colors.foreground}
-label-disconnected             = offline
-label-disconnected-foreground  = ${colors.foreground}
-
-
-[module/vpn]
-type                          = internal/network
-interface                     = tun0
-interval                      = 5.0
-accumulate-stats              = true
-format-connected              = VPN: <label-connected>
-format-connected-foreground   = ${colors.blue}
-format-disconnected           = <label-disconnected>
-label-connected               = Connected
-label-connected-foreground    = ${colors.foreground}
-label-disconnected            = (None)
-label-disconnected-foreground = ${colors.foreground}
-
-
-[module/mpd]
-type                     = internal/mpd
-host                     = 127.0.0.1
-port                     = 6600
-interval                 = 2
-format-online            =  <label-song>
-format-online-padding    = ${user.padding}
-format-online-foreground = ${colors.magenta}
-label-song               = %artist% - %title%
-label-offline            = mpd is offline
-label-song-foreground    = ${colors.foreground}
-label-offline-foreground = ${colors.foreground}
-icon-play                = 
-icon-pause               = 
-icon-prev                = 
-icon-next                = 
-icon-play-foreground     = ${colors.blue}
-icon-pause-foreground    = ${colors.blue}
-icon-prev-foreground     = ${colors.blue}
-icon-next-foreground     = ${colors.blue}
-
-
-[module/search]
-type               = custom/text
-content            = 
-content-padding    = ${user.padding}
-content-background = ${colors.dark1}
-click-left         = rofi -show drun
-
-
-[module/power]
-type               = custom/text
-content            = 
-content-padding    = ${user.padding}
-content-background = ${colors.dark2}
-click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
-
-
 [module/wm]
 type               = custom/script
 exec               = echo " "`xprop -root _NET_WM_NAME | cut -d \" -f 2`
@@ -249,19 +180,7 @@ format-padding     = 2
 click-left         = select_wm
 
 
-[module/weather]
-type               = custom/script
-exec               = ~/.local/bin/polybar/weather.py
-exec-if            = check_connection.sh
-interval           = 43200
-format-prefix      = " "
-format-padding     = ${user.padding}
-format-prefix-foreground = ${colors.cyan}
-
-
-[module/bus]
-type               = custom/script
-exec               = bus.sh
-exec-if            = check_connection.sh
-interval           = 180
-format-prefix      = " "
+[module/ticker-crypto]
+type = custom/script
+exec = ~/.polybar/scripts/ticker-crypto/ticker-crypto.sh
+interval = 600
