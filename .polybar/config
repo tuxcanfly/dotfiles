@@ -38,7 +38,7 @@ modules-right       = kdeconnect ticker-crypto wireless-network volume battery d
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = Cascadia Code:size=8;2
+font-0              = Cascadia Code:size=6;2
 font-1              = SF Pro Text:size=7;2
 font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
@@ -151,7 +151,7 @@ animation-charging-0       = 
 [module/wireless-network]
 type                           = internal/network
 accumulate-stats               = true
-interface                      = wlp58s0 
+interface                      = wlan0 
 interval                       = 5.0
 format-connected               = <ramp-signal> <label-connected>
 format-connected-padding       = ${user.padding}

@@ -1,8 +1,5 @@
+alias g=git
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-alias m=./manage.py
-alias flix="pirate-get -C 'peerflix %s --mpv'"
-alias music='tmux new-session "tmux source-file ~/.ncmpcpp/tmux_session"' # Tmux session with ncmpcpp and cover art
-alias rm="rm -i"
 
 hexcmp () {
     cmp -l $1 $2 | gawk '{printf "%08X %02X %02X\n", $1, strtonum(0$2), strtonum(0$3)}' | vim -

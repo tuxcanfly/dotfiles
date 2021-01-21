@@ -1,1 +1,1 @@
-colorscheme base16-material-darker
+colorscheme base16-gruvbox-dark-medium

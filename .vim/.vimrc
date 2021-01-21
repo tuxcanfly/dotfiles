@@ -53,6 +53,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'Shougo/denite.nvim'
 Plug 'tomlion/vim-solidity'
 Plug 'jpalardy/vim-slime'
+Plug 'brooth/far.vim'
 call plug#end()
 
 syntax on
@@ -104,8 +105,6 @@ let g:tern_show_argument_hints          = "on_move"
 let g:tern_map_keys                     = 1
 
 highlight Comment cterm=italic
-
-colorscheme base16-default-dark
 
 if filereadable(expand("~/.vim/colorscheme.vim"))
   source ~/.vim/colorscheme.vim

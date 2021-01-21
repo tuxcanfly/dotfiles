@@ -52,7 +52,7 @@ set unfocused_color = ff32455c
 
 # set font
 
-font pango: Cascadia Code 16
+font pango: Monoid 16
 
 # Use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
@@ -188,12 +188,15 @@ bindsym XF86PowerOff exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerIn
 bindsym $Mod+d exec rofi -show drun
 bindsym $Mod+Return exec st
 
-; bindsym $Mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Cascadia Code:size=16'"
 bindsym Control+space exec rofi -lines 12 -padding 18 -location 0 -columns 3 -show combi -sidebar-mode
 bindsym $Alt+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym Shift+space rofi -show calc -modi calc -no-show-match -no-sort
+bindsym $Alt+e exec rofi -show emoji -modi emoji
 
-bindsym $Alt+Control+l exec "i3lock"
-bindsym $Mod+w exec "brave"
+bindsym $Alt+Control+l exec betterlockscreen -l blur
+bindsym $Mod+w exec brave
+bindsym $Mod+Shift+w exec chromium --incognito
+bindsym $Mod+s exec shot 
 
 ; [Autostart]
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
@@ -212,3 +215,4 @@ exec syncthing
 exec mopidy
 exec autocutsel -fork
 exec autocutsel -selection PRIMARY -fork
+exec polybar -c ~/.polybar/config -r default

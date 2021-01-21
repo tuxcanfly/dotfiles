@@ -36,8 +36,8 @@ URxvt.perl-ext-common:
 
 
 !! Fonts
-URxvt.font: xft:Cascadia Code:size=20
-URxvt*boldFont: xft:Cascadia Code:size=20
+URxvt.font: xft:Monoid:style=Retina:size=20
+URxvt*boldFont: xft:Monoid:style=Retina:size=20
 URxvt.allow_bold:           false
 URxvt*boldMode:             true
 ! Fix font space

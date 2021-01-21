@@ -184,3 +184,4 @@ PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
+complete -C /usr/local/bin/bitcomplete bit
